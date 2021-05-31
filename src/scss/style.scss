@@ -13,6 +13,18 @@ h6 {
   text-align: center;
 }
 
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:100px;
+  background:rgba(255, 255, 255, .9);
+  height:35px;
+  border-radius:3px;
+  transition:0.4s linear;
+  transition-property:width, background-color;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none; 
