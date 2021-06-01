@@ -9,11 +9,10 @@ const ShowSkills = () => {
   var views = []
   values.forEach((value) => {
     views.push(
-      <div>
+      <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
         <TrackVisibility once>
         {({isVisible}) => {
           return (
-          <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
             <div className="skillbar">
               <div className="skillbar-title" style={isVisible ? value.active : value.before}>
                 <span>
@@ -24,7 +23,6 @@ const ShowSkills = () => {
                 {value.rating}
               </div>
             </div>
-          </div>
           )
         }}
         </TrackVisibility>
