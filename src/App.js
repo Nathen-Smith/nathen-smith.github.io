@@ -6,7 +6,6 @@ import {values} from './components/skills'
 
 
 const ComponentToTrack = ({ isVisible }) => {
-  // var style = {}
   const screenType = useScreenType();
 
   return (
