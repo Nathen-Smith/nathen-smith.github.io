@@ -28,9 +28,11 @@ h3 {
   font-size:12px;
   height:35px;
   line-height:35px;
-  color:rgba(0, 0, 0, 1);
+  color:rgba(255, 255, 255, .9);
+  visibility: hidden;
+  // background);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  @include sans-serif-font;
+  // @include sans-serif-font;
 
 }
 
