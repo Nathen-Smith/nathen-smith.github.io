@@ -1,6 +1,6 @@
 const values = [
   {
-    text: "JavaScript",
+    text: "JavaScript (ES6+)",
     rating: "Intermediate",
     before: {width: '0%', background: '#F0DB4F'},
     active: {transition: '3s', background: '#F0DB4F', width: '60%' }
@@ -8,8 +8,8 @@ const values = [
   {
     text: "Linux",
     rating: "Intermediate",
-    before: {width: '0%', background: '#333333'},
-    active: {transition: '3s', background: '#333333', width: '70%' }
+    before: {width: '0%', background: '#0040AD'},
+    active: {transition: '3s', background: '#0040AD', width: '70%' }
   },
   {
     text: "Go",
@@ -30,7 +30,7 @@ const values = [
     active: {transition: '3s', background: '#61DBFB', width: '70%' }
   },
   {
-    text: "SQL",
+    text: "SQL (MySQL)",
     rating: "Pro",
     before: {width: '0%', background: '#F29111'},
     active: {transition: '3s', background: '#F29111', width: '85%' }

@@ -19,9 +19,9 @@ const ShowSkills = () => {
                   {value.text}
                 </span>
               </div>
-              <div className="skill-bar-percent" style={isVisible ? {transition:'3s linear',color:'black',visibility:'visible'}:{}}>
+              {/* <div className="skill-bar-percent" style={isVisible ? {transition:'3s linear',color:'black',visibility:'visible'}:{}}>
                 {value.rating}
-              </div>
+              </div> */}
             </div>
           )
         }}

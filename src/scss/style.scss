@@ -17,6 +17,15 @@ h3 {
   @include serif-font
 }
 
+a {
+  color: #FFF;
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
 .App {
   text-align: center;
 }
