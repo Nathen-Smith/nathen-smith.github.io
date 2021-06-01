@@ -4,29 +4,34 @@ import './scss/style.scss';
 import useScreenType from "react-screentype-hook";
 import {values} from './components/skills'
 
-
-const ComponentToTrack = ({ isVisible }) => {
+const ShowSkills = () => {
   const screenType = useScreenType();
-
-  return (
-    
-    <div>{values.map((value, i)=> 
-      <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
-      <div className="skillbar" >
-        <div key={i} className="skillbar-title" style={isVisible ? value.active : value.before}>
-          <span>
-            {value.text}
-          </span>
-        </div>
-        <div className="skill-bar-percent"
-         style={isVisible ? {transition:'3s linear',color:'black',visibility:'visible'}:{}}
-         >
-          {value.rating}
-        </div>
+  var views = []
+  values.forEach((value) => {
+    views.push(
+      <div>
+        <TrackVisibility once>
+        {({isVisible}) => {
+          return (
+          <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
+            <div className="skillbar">
+              <div className="skillbar-title" style={isVisible ? value.active : value.before}>
+                <span>
+                  {value.text}
+                </span>
+              </div>
+              <div className="skill-bar-percent" style={isVisible ? {transition:'3s linear',color:'black',visibility:'visible'}:{}}>
+                {value.rating}
+              </div>
+            </div>
+          </div>
+          )
+        }}
+        </TrackVisibility>
       </div>
-      </div>
-    )}</div>
-  ) 
+    );
+  });
+  return views;
 }
 
 const App = () => {
@@ -35,9 +40,7 @@ const App = () => {
       <h1 style={{fontSize:'60px'}}>Hi.</h1>
       <h2>I'm Nathen Smith.</h2>
       <h3 style={{height:'1000px'}}>Scroll down to see skills</h3>
-      <TrackVisibility once>
-        <ComponentToTrack />
-      </TrackVisibility>
+      <ShowSkills />
       <h2 style={{height:"100px"}}>epic</h2>
     </div>
 
