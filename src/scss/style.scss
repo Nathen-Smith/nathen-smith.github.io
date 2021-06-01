@@ -1,50 +1,5 @@
 @import "mixins";
 
-.error {
-  border: 1px #f00;
-  background-color: #fdd;
-
-  &--serious {
-    @extend .error;
-    border-width: 3px;
-  }
-}
-
-$colors-list: #111 #222 #333 #444 #555;
-@each $current-color in $colors-list {
-  $i: index($colors-list, $current-color);
-  .stuff-#{$i} { 
-    // position:relative;
-    // display:block;
-    // margin-bottom:15px;
-    // width:100px;
-    // // background:rgba(255, 255, 255, .9);
-    // height:35px;
-    // border-radius:3px;
-    // transition:0.4s linear;
-    // transition-property:width, background-color;
-    // color: $current-color;
-    // background-color: $current-color;
-    color: $current-color;
-    transition: 1s;
-    background: white;
-  }
-}
-
-.before {
-  color: black;
-  background-color: white;
-  width: 100px;
-}
-
-.active {
-  // color: red;
-  background-color: red;
-  width: 200px;
-  transition: 1s;
-
-}
-
 h1,
 h2,
 h3,
@@ -52,6 +7,14 @@ h4,
 h5,
 h6 {
   @include sans-serif-font;
+  color: rgba(255, 255, 255, .9);
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+h3 {
+  // font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  @include serif-font
 }
 
 .App {
@@ -67,6 +30,8 @@ h6 {
   line-height:35px;
   color:rgba(0, 0, 0, 1);
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  @include sans-serif-font;
+
 }
 
 .skillbar-title {
@@ -96,13 +61,11 @@ h6 {
 .skillbar {
   position:relative;
   display:block;
+  width: 100%;
   margin-bottom:15px;
-  width:100%;
   background:rgba(255, 255, 255, .9);
   height:35px;
   border-radius:3px;
-  transition:0.4s linear;
-  transition-property:width, background-color;
 }
 
 .App-logo {
