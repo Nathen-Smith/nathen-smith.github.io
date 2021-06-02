@@ -16,7 +16,6 @@ const App = () => {
       <Links />
       <br/>
     </div>
-
   );
 }
 
