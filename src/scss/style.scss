@@ -48,8 +48,9 @@ a {
   font-size:12px;
   font-weight:bold;
   // color:#ffffff;
-  border-top-left-radius:3px;
-  border-bottom-left-radius:3px;
+  // border-top-left-radius:3px;
+  // border-bottom-left-radius:3px;
+  border-radius: 6px;
   // font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -71,6 +72,6 @@ a {
   margin-bottom:15px;
   background:rgba(255, 255, 255, .9);
   height:35px;
-  border-radius:3px;
+  border-radius:6px;
 }
 

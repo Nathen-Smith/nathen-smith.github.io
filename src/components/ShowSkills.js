@@ -14,7 +14,7 @@ const ShowSkills = () => {
         <TrackVisibility once>
         {({isVisible}) => {
           return (
-            <div className="container" style={screenType==="3-cols"? {} : {transform: 'scaleY(2)',height:'100px', marginBottom:'10px'}}>
+            <div className="container" style={screenType==="3-cols"? {} : {transform: 'scaleY(2)',height:'100px', marginBottom:'10px',borderRadius:'6px'}}>
             <div className="skillbar">
               <div className="skillbar-title" style={isVisible ? value.active : value.before}>
                 <span style={screenType==="3-cols"? {} : {transform: 'scaleY(0.5)',fontSize:'24px'}}>
