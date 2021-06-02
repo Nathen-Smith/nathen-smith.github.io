@@ -25,7 +25,7 @@ const Layout = () => {
   } 
   // else if (!screenType.isMobile) {
     return (
-      <div style={{margin:'auto',padding:'10px'}}>
+      <div style={{margin:'auto',padding:'30px'}}>
       <ShowSkills />
       <Links />
     </div>
