@@ -12,8 +12,10 @@ const Layout = () => {
   const screenType = useScreenType();
   if (screenType === "3-cols") {
     return (
-
       <div>
+        <h1 style={{fontSize:'60px'}}>Hi.</h1>
+        <h2>I'm Nathen Smith.</h2>
+        <h3 style={{height:'1000px'}}>Scroll down:)</h3>
         <div style={{width:'50%',margin:'auto',padding:'10px'}}>
           <ShowSkills />
           <div style={{display:'block'}}>
@@ -23,33 +25,23 @@ const Layout = () => {
       </div>
     );
   } 
-  // else if (!screenType.isMobile) {
-    return (
+  return (
+    <div>
+      <h1 style={{fontSize:'120px'}}>Hi.</h1>
+      <h2>I'm Nathen Smith.</h2>
+      <h3 style={{height:'1000px'}}>Scroll down:)</h3>
       <div style={{margin:'auto',padding:'30px'}}>
-      <ShowSkills />
-      <Links />
-    </div>
-      
-      
-    );
-  // }
+        <ShowSkills />
+        <Links />
+      </div>
+    </div> 
+  );
+
 }
 
 const App = () => {
-  // const screenType = useScreenType();
   return (
     <div style={{background:'#292c33'}}>
-      <h1 style={{fontSize:'60px'}}>Hi.</h1>
-      <h2>I'm Nathen Smith.</h2>
-      <h3 style={{height:'1000px'}}>Scroll down>:)</h3>
-      {/* <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
-        <ShowSkills />
-        <Links />
-      </div> */}
-      {/* {screenType.isMobile ? 
-      <div>ok</div> : <div>notok</div>
-      } */}
-      {/* <Links /> */}
       <Layout />
       <br/>
     </div>

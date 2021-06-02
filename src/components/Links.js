@@ -9,7 +9,6 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import './links.css';
 import useScreenType from "../shared-hooks/useScreenType";
 
-
 fontawesome.library.add(brands)
 
 const links = [
@@ -29,38 +28,37 @@ const links = [
 
 const LinksRow = ({isVisible}) => {
   return (
-    <div style={{marginLeft:'auto', marginRight:'auto', display:'block',width:'270px'}}>
-    <a href={links[0].link} >
-                <FontAwesomeIcon icon={links[0].icon}
-                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'} : {color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
-                />
-              </a>
-              <a href={links[1].link} >
-              <FontAwesomeIcon icon={links[1].icon}
-                style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'} : {color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
-              />
-            </a>
-            <a href={links[2].link} >
-                <FontAwesomeIcon icon={links[2].icon}
-                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'} : {color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
-                />
-              </a></div>
+    <div style={{marginLeft:'auto', marginRight:'auto', display:'block',width:'320px'}}>
+      <a href={links[0].link} >
+        <FontAwesomeIcon icon={links[0].icon}
+          style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
+        />
+      </a>
+      <a href={links[1].link} >
+        <FontAwesomeIcon icon={links[1].icon}
+          style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'30px',marginLeft:'30px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'30px',marginLeft:'30px'}}
+        />
+      </a>
+      <a href={links[2].link} >
+        <FontAwesomeIcon icon={links[2].icon}
+          style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
+        />
+      </a>
+    </div>
   );
 }
 
 const Links = () => {
   const screenType = useScreenType();
-  let views = []
   if (screenType === "3-cols") {
     return (
       <TrackVisibility once>
         <LinksRow />      
       </TrackVisibility>
     )
-
   }
   if (screenType === "fullscreen" || screenType === "1-cols" || screenType === "2-cols") {
-    
+    let views = []
     links.forEach((link) => {
       views.push(
         <TrackVisibility once>
@@ -68,7 +66,7 @@ const Links = () => {
             return (
               <a href={link.link} >
                 <FontAwesomeIcon icon={link.icon}
-                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'} : {color: 'white', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
+                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
                 />
               </a>
             )
@@ -77,22 +75,7 @@ const Links = () => {
       );
     });
     return views;
-    // links.forEach((link) => {
-    //   views.push(
-    //     <TrackVisibility once>
-    //       {({isVisible}) => {
-    //         return (
-    //           <a href={link.link} >
-    //             <FontAwesomeIcon icon={link.icon}
-    //               style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'block',marginRight:'auto',marginLeft:'auto'} : {color: 'white', width:'80px', height: '80px', display:'block',marginRight:'auto',marginLeft:'auto'}}
-    //             />
-    //           </a>
-    //         )
-    //       }}
-    //     </TrackVisibility>
-    //   );
-    // });
-    // return views;
+    
   }
 
 }
