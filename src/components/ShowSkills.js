@@ -1,15 +1,15 @@
 import React from 'react';
-import useScreenType from "react-screentype-hook";
+// import useScreenType from "react-screentype-hook";
 import TrackVisibility from 'react-on-screen';
 import {values} from './skills';
 import '../scss/style.scss';
 
 const ShowSkills = () => {
-  const screenType = useScreenType();
+  // const screenType = useScreenType();
   var views = []
   values.forEach((value) => {
     views.push(
-      <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
+      // <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
         <TrackVisibility once>
         {({isVisible}) => {
           return (
@@ -26,7 +26,7 @@ const ShowSkills = () => {
           )
         }}
         </TrackVisibility>
-      </div>
+      // </div>
     );
   });
   return views;
