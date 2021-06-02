@@ -68,7 +68,7 @@ const Links = () => {
             return (
               <a href={link.link} >
                 <FontAwesomeIcon icon={link.icon}
-                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'} : {color: 'white', width:'80px', height: '80px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
+                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 0.7s linear 1',animationDelay: '0.1s',color: 'white', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'} : {color: 'white', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
                 />
               </a>
             )

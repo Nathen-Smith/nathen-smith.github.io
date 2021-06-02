@@ -1,6 +1,6 @@
 const values = [
   {
-    text: "JavaScript (ES6+)",
+    text: "JavaScript",
     rating: "Intermediate",
     before: {width: '0%', background: '#F0DB4F'},
     active: {transition: '3s', background: '#F0DB4F', width: '60%' }
