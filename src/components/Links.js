@@ -1,12 +1,14 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
 import fontawesome from '@fortawesome/fontawesome'
-import useScreenType from "react-screentype-hook";
+// import useScreenType from "react-screentype-hook";
 import brands from '@fortawesome/fontawesome-free-brands'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import './links.css';
+import useScreenType from "../shared-hooks/useScreenType";
+
 
 fontawesome.library.add(brands)
 
@@ -48,8 +50,17 @@ const LinksRow = ({isVisible}) => {
 
 const Links = () => {
   const screenType = useScreenType();
-  var views = []
-  if (screenType.isMobile) {
+  let views = []
+  if (screenType === "3-cols") {
+    return (
+      <TrackVisibility once>
+        <LinksRow />      
+      </TrackVisibility>
+    )
+
+  }
+  if (screenType === "fullscreen" || screenType === "1-cols" || screenType === "2-cols") {
+    
     links.forEach((link) => {
       views.push(
         <TrackVisibility once>
@@ -66,13 +77,6 @@ const Links = () => {
       );
     });
     return views;
-  } else if (!screenType.isMobile) {
-    return (
-      <TrackVisibility once>
-        <LinksRow />      
-      </TrackVisibility>
-            
-    )
     // links.forEach((link) => {
     //   views.push(
     //     <TrackVisibility once>

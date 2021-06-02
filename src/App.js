@@ -3,21 +3,16 @@ import ShowSkills from './components/ShowSkills'
 import Links from './components/Links'
 import fontawesome from '@fortawesome/fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
-import useScreenType from "react-screentype-hook";
+// import useScreenType from "react-screentype-hook";
+import useScreenType from "./shared-hooks/useScreenType";
 
 fontawesome.library.add(brands)
 
 const Layout = () => {
   const screenType = useScreenType();
-  if (screenType.isMobile) {
+  if (screenType === "3-cols") {
     return (
-      <div>
-        <ShowSkills />
-        <Links />
-      </div>
-    );
-  } else if (!screenType.isMobile) {
-    return (
+
       <div>
         <div style={{width:'50%',margin:'auto',padding:'10px'}}>
           <ShowSkills />
@@ -25,12 +20,19 @@ const Layout = () => {
             <Links />
           </div>
         </div>
-        {/* <div style={{margin:'auto',padding:'10px'}}> */}
-        {/* </div> */}
       </div>
+    );
+  } 
+  // else if (!screenType.isMobile) {
+    return (
+      <div style={{margin:'auto',padding:'10px'}}>
+      <ShowSkills />
+      <Links />
+    </div>
+      
       
     );
-  }
+  // }
 }
 
 const App = () => {
@@ -39,7 +41,7 @@ const App = () => {
     <div style={{background:'#292c33'}}>
       <h1 style={{fontSize:'60px'}}>Hi.</h1>
       <h2>I'm Nathen Smith.</h2>
-      <h3 style={{height:'1000px'}}>Scroll down to see skills</h3>
+      <h3 style={{height:'1000px'}}>Scroll down>:)</h3>
       {/* <div style={screenType.isMobile ? {width:'100%'} : {width:'50%'}}>
         <ShowSkills />
         <Links />
