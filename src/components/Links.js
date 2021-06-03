@@ -1,10 +1,10 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
-import fontawesome from '@fortawesome/fontawesome'
-import brands from '@fortawesome/fontawesome-free-brands'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import fontawesome from '@fortawesome/fontawesome';
+import brands from '@fortawesome/fontawesome-free-brands';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import './links.css';
 import useScreenType from "../shared-hooks/useScreenType";
 

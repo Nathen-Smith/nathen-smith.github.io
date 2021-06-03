@@ -1,7 +1,7 @@
-import fontawesome from '@fortawesome/fontawesome'
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import brands from '@fortawesome/fontawesome-free-brands'
+import fontawesome from '@fortawesome/fontawesome';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import brands from '@fortawesome/fontawesome-free-brands';
 
 fontawesome.library.add(brands)
 

@@ -6,10 +6,10 @@ import brands from '@fortawesome/fontawesome-free-brands';
 import useScreenType from "./shared-hooks/useScreenType";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Github from "./components/navlinks/Github"
-import LinkedIn from "./components/navlinks/LinkedIn"
-import Email from "./components/navlinks/Email"
-import './scss/style.scss'
+import Github from "./components/navlinks/Github";
+import LinkedIn from "./components/navlinks/LinkedIn";
+import Email from "./components/navlinks/Email";
+import './scss/style.scss';
 
 fontawesome.library.add(brands)
 

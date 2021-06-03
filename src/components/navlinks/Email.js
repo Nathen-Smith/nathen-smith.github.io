@@ -1,6 +1,6 @@
 import {links} from './links.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './navlinks.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './navlinks.css';
 
 const Email = () => {
   return (
