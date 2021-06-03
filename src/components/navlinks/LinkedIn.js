@@ -1,7 +1,7 @@
 import {links} from './links.js';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Container } from 'react-bootstrap';
+// import { Container } from 'react-bootstrap';
 
 const LinkedIn = () => {
   return (

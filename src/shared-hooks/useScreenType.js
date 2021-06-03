@@ -15,7 +15,7 @@ const useScreenType = () => {
     return "1-cols";
   }
 
-  return "fullscreen";
+  return "mobile";
 
 }
 

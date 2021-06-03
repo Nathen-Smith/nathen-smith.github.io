@@ -57,7 +57,7 @@ const Links = () => {
       </TrackVisibility>
     )
   }
-  if (screenType === "fullscreen" || screenType === "1-cols" || screenType === "2-cols") {
+  if (screenType === "mobile" || screenType === "1-cols" || screenType === "2-cols") {
     let views = []
     links.forEach((link) => {
       views.push(

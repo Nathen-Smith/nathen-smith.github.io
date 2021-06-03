@@ -9,19 +9,64 @@ import Nav from "react-bootstrap/Nav";
 import Github from "./components/navlinks/Github"
 import LinkedIn from "./components/navlinks/LinkedIn"
 import Email from "./components/navlinks/Email"
+import './scss/style.scss'
 // import { Container } from 'react-bootstrap';
 
 fontawesome.library.add(brands)
 
 const Layout = () => {
   const screenType = useScreenType();
-  if (screenType === "3-cols") {
+
+  if(screenType === "mobile" ) {
+    return (
+      <div >
+        <Navbar collapseOnSelect expand="xl" bg="light" sticky="top">
+        <Navbar.Brand className="font-weight-bold text-muted">
+          Nathen Smith
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav>
+          <Github />
+          <LinkedIn />
+          <Email />
+        </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+        <h1 style={{fontSize:'120px'}}>Hi.</h1>
+        <h2>I'm Nathen Smith.</h2>
+        <h3 style={{height:'1000px'}}>Scroll down:)</h3>
+        <div style={{margin:'auto',padding:'16px'}}>
+          <ShowSkills />
+          <Links />
+        </div>
+      </div> 
+    );
+  }
+
+
+
+
+  // if (screenType === "3-cols") {
     return (
       <div>
+        <Navbar collapseOnSelect bg="light" expand="xl" sticky="top">
+        <Navbar.Brand className="font-weight-bold text-muted">
+          Nathen Smith
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav>
+          <Github />
+          <LinkedIn />
+          <Email />
+        </Nav>
+        </Navbar.Collapse>
+      </Navbar>
         <h1 style={{fontSize:'60px'}}>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-        <div style={{width:'50%',margin:'auto',padding:'10px'}}>
+        <div style={{width:'60%',margin:'auto',padding:'10px'}}>
           <ShowSkills />
           <div style={{display:'block'}}>
             <Links />
@@ -29,18 +74,12 @@ const Layout = () => {
         </div>
       </div>
     );
-  } 
-  return (
-    <div>
-      <h1 style={{fontSize:'120px'}}>Hi.</h1>
-      <h2>I'm Nathen Smith.</h2>
-      <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-      <div style={{margin:'auto',padding:'16px'}}>
-        <ShowSkills />
-        <Links />
-      </div>
-    </div> 
-  );
+  // } 
+
+  // return (
+  //   <div>poop</div>
+  // )
+  
 
 }
 
@@ -50,24 +89,9 @@ const App = () => {
   }
   return (
     <div >
-      <Navbar collapseOnSelect bg="light" expand="md" sticky="top">
-        {/* <Container> */}
-        <Navbar.Brand className="font-weight-bold text-muted">
-          Nathen Smith
-        </Navbar.Brand>
-        {/* </Container> */}
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav style={{position:'absolute',right:'0px'}}>
-        <Github />
-        <LinkedIn />
-        <Email />
-        </Nav>
-        </Navbar.Collapse>
-        {/* <Navbar.Toggle /> */}
-      </Navbar>
-    <div style={{background:'#292c33'}}>
-      <Layout />
+      
+      <div style={{background:'#292c33'}}>
+        <Layout />
       <br/>
     </div>
     </div>
