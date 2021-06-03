@@ -1,7 +1,6 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
 import fontawesome from '@fortawesome/fontawesome'
-// import useScreenType from "react-screentype-hook";
 import brands from '@fortawesome/fontawesome-free-brands'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -58,23 +57,21 @@ const Links = () => {
     )
   }
   if (screenType === "mobile" || screenType === "1-cols" || screenType === "2-cols") {
-    let views = []
-    links.forEach((link) => {
-      views.push(
-        <TrackVisibility once key={link.link}>
-          {({isVisible}) => {
-            return (
-              <a href={link.link} >
-                <FontAwesomeIcon icon={link.icon}
-                  style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'160px', height: '160px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
-                />
-              </a>
-            )
-          }}
-        </TrackVisibility>
-      );
-    });
-    return views;
+    return (
+      links.map((link, i) => 
+          <TrackVisibility once key={i}>
+            {({isVisible}) => {
+              return (
+                <a href={link.link} >
+                  <FontAwesomeIcon icon={link.icon}
+                    style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
+                  />
+                </a>
+              )
+            }}
+          </TrackVisibility>
+      )
+    );
 
   }
 

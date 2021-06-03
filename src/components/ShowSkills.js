@@ -1,31 +1,25 @@
 import React from 'react';
-// import useScreenType from "react-screentype-hook";
 import TrackVisibility from 'react-on-screen';
 import {values} from './skills';
 import '../scss/style.scss';
-// import useScreenType from "../shared-hooks/useScreenType";
+import { Container } from 'react-bootstrap';
 
 const ShowSkills = () => {
-  // const screenType = useScreenType();
   var views = []
   values.forEach((value) => {
     views.push(
         <TrackVisibility once key={value.text}>
         {({isVisible}) => {
           return (
-            <div className="container"
-            //  style={screenType==="3-cols"? {} : {transform: 'scaleY(2)',height:'100px', marginBottom:'10px'}}
-             >
+            <Container>
               <div className="skillbar">
                 <div className="skillbar-title" style={isVisible ? value.active : value.before}>
-                  <span 
-                  // style={screenType==="3-cols"? {} : {transform: 'scaleY(0.5)',fontSize:'24px'}}
-                  >
+                  <span>
                     {value.text}
                   </span>
                 </div>
               </div>
-            </div>
+            </Container>
           )
         }}
         </TrackVisibility>
