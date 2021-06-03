@@ -61,7 +61,7 @@ const Links = () => {
     let views = []
     links.forEach((link) => {
       views.push(
-        <TrackVisibility once>
+        <TrackVisibility once key={link.link}>
           {({isVisible}) => {
             return (
               <a href={link.link} >
@@ -75,7 +75,7 @@ const Links = () => {
       );
     });
     return views;
-    
+
   }
 
 }

@@ -1,5 +1,14 @@
 .navlink {
     color: black;
-    transform: scale(1.5);
-    margin-right: 30px;
+}
+
+.navlink:hover {
+    color:rosybrown;
+    transition: all 0.35s;
+}
+
+li {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
 }

@@ -10,7 +10,7 @@ const ShowSkills = () => {
   var views = []
   values.forEach((value) => {
     views.push(
-        <TrackVisibility once>
+        <TrackVisibility once key={value.text}>
         {({isVisible}) => {
           return (
             <div className="container" style={screenType==="3-cols"? {} : {transform: 'scaleY(2)',height:'100px', marginBottom:'10px'}}>
