@@ -1,10 +1,15 @@
 import React from 'react';
-import ShowSkills from './components/ShowSkills'
-import Links from './components/Links'
-import fontawesome from '@fortawesome/fontawesome'
-import brands from '@fortawesome/fontawesome-free-brands'
+import ShowSkills from './components/ShowSkills';
+import Links from './components/Links';
+import fontawesome from '@fortawesome/fontawesome';
+import brands from '@fortawesome/fontawesome-free-brands';
 // import useScreenType from "react-screentype-hook";
 import useScreenType from "./shared-hooks/useScreenType";
+import Navbar from "react-bootstrap/Navbar";
+// import LinksRow from "./components/LinksRow";
+import Github from "./components/navlinks/Github"
+import LinkedIn from "./components/navlinks/LinkedIn"
+import Email from "./components/navlinks/Email"
 
 fontawesome.library.add(brands)
 
@@ -41,9 +46,20 @@ const Layout = () => {
 
 const App = () => {
   return (
+    <div >
+      <Navbar collapseOnSelect bg="light" expand="md" sticky="top">
+        <Navbar.Brand className="font-weight-bold text-muted">
+          Nathen Smith
+        </Navbar.Brand>
+        <Github />
+        <LinkedIn />
+        <Email />
+        {/* <Navbar.Toggle /> */}
+      </Navbar>
     <div style={{background:'#292c33'}}>
       <Layout />
       <br/>
+    </div>
     </div>
   );
 }
