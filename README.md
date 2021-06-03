@@ -1,8 +1,8 @@
 # https://nathen-smith.github.io/personal-site/
-
 Running locally:
-```
+```sh
 npm install
 npm start
 ```
-To deploy use ```npm run deploy```
+
+Styling and animations are credited to @cujarrett https://mattjarrett.dev
