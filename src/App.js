@@ -19,7 +19,8 @@ const Layout = () => {
 
   if(screenType === "mobile" ) {
     return (
-      <div >
+      <div>
+        <div style={{background:'#292c33'}}>
         <Navbar collapseOnSelect expand="xl" bg="light" sticky="top">
         <Navbar.Brand className="font-weight-bold text-muted">
           Nathen Smith
@@ -40,6 +41,7 @@ const Layout = () => {
           <ShowSkills />
           <Links />
         </div>
+        </div>
       </div> 
     );
   }
@@ -49,7 +51,7 @@ const Layout = () => {
 
   // if (screenType === "3-cols") {
     return (
-      <div>
+      <div style={{background:'#292c33'}}>
         <Navbar collapseOnSelect bg="light" expand="xl" sticky="top">
         <Navbar.Brand className="font-weight-bold text-muted">
           Nathen Smith
@@ -88,13 +90,10 @@ const App = () => {
     console.log('ok')
   }
   return (
-    <div >
       
-      <div style={{background:'#292c33'}}>
+      
         <Layout />
-      <br/>
-    </div>
-    </div>
+  
   );
 }
 
