@@ -91,6 +91,15 @@ a {
 }
 
 .nathen:hover {
-  color: rosybrown!important;
+  color: black!important;
+  transition: 0.15s linear;
+}
+
+.navlink {
+  color:rgba(0,0,0,.5);
+}
+
+.navlink:hover {
+  color: rgba(0, 0, 0, 1);
   transition: 0.15s linear;
 }
