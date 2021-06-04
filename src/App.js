@@ -10,8 +10,43 @@ import Github from "./components/navlinks/Github";
 import LinkedIn from "./components/navlinks/LinkedIn";
 import Email from "./components/navlinks/Email";
 import './scss/style.scss';
+// import { Button } from 'react-bootstrap';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 fontawesome.library.add(brands)
+
+const MyNavbar = () => {
+  return (
+    <Navbar collapseOnSelect bg="light" expand="md" sticky="top">
+      <NavHashLink smooth to="#">
+        <Navbar.Brand className="font-weight-bold text-muted">
+            Nathen Smith
+        </Navbar.Brand>
+      </NavHashLink>
+      
+      
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="mr-auto">
+        {/* <NavHashLink smooth to="#about">
+          <Navbar.Brand className="font-weight-bold">
+              About
+          </Navbar.Brand>
+        </NavHashLink> */}
+        <Nav.Link href="#about">About</Nav.Link>
+        </Nav>
+        
+        <Nav>
+          <Github />
+          <LinkedIn />
+          <Email />
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  )
+
+}
 
 const Layout = () => {
   const screenType = useScreenType();
@@ -20,23 +55,11 @@ const Layout = () => {
     return (
       <div>
         <div style={{background:'#292c33'}}>
-        <Navbar collapseOnSelect expand="xl" bg="light" sticky="top">
-        <Navbar.Brand className="font-weight-bold text-muted">
-          Nathen Smith
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav>
-          <Github />
-          <LinkedIn />
-          <Email />
-        </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+        <MyNavbar />
         <h1 style={{fontSize:'120px'}}>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-        <div style={{margin:'auto',padding:'16px'}}>
+        <div id="about" style={{margin:'auto',padding:'16px'}}>
           <ShowSkills />
           <Links />
         </div>
@@ -45,28 +68,25 @@ const Layout = () => {
     );
   }
   return (
+    
     <div style={{background:'#292c33'}}>
-      <Navbar collapseOnSelect bg="light" expand="xl" sticky="top">
-      <Navbar.Brand className="font-weight-bold text-muted">
-        Nathen Smith
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav>
-        <Github />
-        <LinkedIn />
-        <Email />
-      </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+     <MyNavbar />
+    <div id="intro">
       <h1 style={{fontSize:'60px'}}>Hi.</h1>
       <h2>I'm Nathen Smith.</h2>
+      </div>
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
+      
+      
+      
+      <div id="about">
+      {/* <a href="http://localhost:3000/personal-site#about"> */}
       <div style={{width:'60%',margin:'auto',padding:'10px'}}>
         <ShowSkills />
         <div style={{display:'block'}}>
           <Links />
         </div>
+      </div>
       </div>
     </div>
   );
@@ -74,8 +94,16 @@ const Layout = () => {
 }
 
 const App = () => {
+  if (window.performance) {
+    if (performance.navigation.type === 1) {
+      window.location.replace("")
+    }
+  }
   return (
-    <Layout />
+    <Router>
+      <Layout />
+    </Router>
+    
   );
 }
 

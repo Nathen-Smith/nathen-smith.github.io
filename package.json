@@ -24,6 +24,8 @@
     "react-on-screen": "^2.1.1",
     "react-responsive": "^8.2.0",
     "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
     "react-screentype-hook": "^1.0.17",
     "react-scripts": "4.0.3",
     "web-vitals": "^0.2.4",
