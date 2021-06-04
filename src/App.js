@@ -13,19 +13,20 @@ import './scss/style.scss';
 // import { Button } from 'react-bootstrap';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { NavHashLink } from 'react-router-hash-link';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 fontawesome.library.add(brands)
 
 const MyNavbar = () => {
-  return (
+  const screenType = useScreenType();
+  if (screenType === "mobile") {
     <Navbar collapseOnSelect bg="light" expand="md" sticky="top">
       <NavHashLink smooth to="#">
         <Navbar.Brand className="font-weight-bold text-muted">
             Nathen Smith
         </Navbar.Brand>
       </NavHashLink>
-      
-      
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
@@ -35,8 +36,33 @@ const MyNavbar = () => {
           </Navbar.Brand>
         </NavHashLink> */}
         <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="#contact">Contact</Nav.Link>
         </Nav>
-        
+      </Navbar.Collapse>
+    </Navbar>
+  }
+  return (
+    <Navbar collapseOnSelect bg="light" expand="md" sticky="top">
+      <NavHashLink smooth to="#">
+        <Navbar.Brand className="font-weight-bold text-muted">
+            Nathen Smith
+        </Navbar.Brand>
+      </NavHashLink>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+      <Nav className="mr-auto">
+        {/* <NavHashLink smooth to="#about">
+          <Navbar.Brand className="font-weight-bold">
+              About
+          </Navbar.Brand>
+        </NavHashLink> */}
+        <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="#contact">Contact</Nav.Link>
+        <Nav.Link href="#about">
+          <FontAwesomeIcon icon={faEnvelope} size="lg">
+          </FontAwesomeIcon>
+        </Nav.Link>
+        </Nav>
         <Nav>
           <Github />
           <LinkedIn />
@@ -59,9 +85,12 @@ const Layout = () => {
         <h1 style={{fontSize:'120px'}}>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-        <div id="about" style={{margin:'auto',padding:'16px'}}>
-          <ShowSkills />
-          <Links />
+        <div style={{margin:'auto',padding:'16px'}}>
+          <div id="about"></div>
+            <ShowSkills />
+          <div id="contact">
+            <Links />
+          </div>
         </div>
         </div>
       </div> 
@@ -79,11 +108,13 @@ const Layout = () => {
       
       
       
-      <div id="about">
+      <div>
       {/* <a href="http://localhost:3000/personal-site#about"> */}
       <div style={{width:'60%',margin:'auto',padding:'10px'}}>
-        <ShowSkills />
-        <div style={{display:'block'}}>
+        <div id="about">
+          <ShowSkills />
+        </div>
+        <div id="contact" style={{display:'block'}}>
           <Links />
         </div>
       </div>

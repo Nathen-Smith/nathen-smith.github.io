@@ -8,7 +8,7 @@ const LinkedIn = () => {
       <a href={links[1].link} >
         <FontAwesomeIcon icon={links[1].icon}
         className="navlink"
-        style={{width:'24px', height:'24px',background:'white'}}
+        style={{width:'24px', height:'24px',backgroundColor:'transparent'}}
         />
       </a>
       </li>
