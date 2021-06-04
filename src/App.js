@@ -7,6 +7,7 @@ import useScreenType from "./shared-hooks/useScreenType";
 import './scss/style.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 import MyNavbar from './components/MyNavbar'
+import ControlledCarousel from './components/carousel/ControlledCarousel'
 
 fontawesome.library.add(brands)
 
@@ -24,6 +25,7 @@ const Layout = () => {
         <h1 style={{fontSize:'60px'}}>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         </div>
+        <ControlledCarousel />
         <h3 style={{height:'1000px'}}>Scroll down:)</h3>
         <div>
         {/* <a href="http://localhost:3000/personal-site#about"> */}
@@ -46,6 +48,7 @@ const Layout = () => {
       <MyNavbar />
       <h1 style={{fontSize:'100px'}}>henlo fren</h1>
       <h2>I'm Nathen Smith.</h2>
+      <ControlledCarousel />
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
       <div style={{margin:'auto',padding:'16px'}}>
         <div id="about">
