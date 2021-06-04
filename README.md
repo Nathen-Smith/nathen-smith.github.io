@@ -1,7 +1,9 @@
 # https://nathen-smith.github.io/personal-site/
 Running locally:
-```sh
+```
 npm install
+```
+```
 npm start
 ```
 
