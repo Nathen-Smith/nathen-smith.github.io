@@ -49,14 +49,14 @@ const LinksRow = ({isVisible}) => {
 
 const Links = () => {
   const screenType = useScreenType();
-  if (screenType === "3-cols") {
+  if (screenType === "3-cols" || screenType === "2-cols") {
     return (
       <TrackVisibility once>
         <LinksRow />      
       </TrackVisibility>
     )
   }
-  if (screenType === "mobile" || screenType === "1-cols" || screenType === "2-cols") {
+  // if (screenType === "mobile" || screenType === "1-cols" || screenType === "2-cols") {
     return (
       links.map((link, i) => 
           <TrackVisibility once key={i}>
@@ -73,7 +73,7 @@ const Links = () => {
       )
     );
 
-  }
+  // }
 
 }
 

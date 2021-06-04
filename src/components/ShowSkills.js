@@ -5,27 +5,26 @@ import '../scss/style.scss';
 import { Container } from 'react-bootstrap';
 
 const ShowSkills = () => {
-  var views = []
-  values.forEach((value) => {
-    views.push(
-        <TrackVisibility once key={value.text}>
-        {({isVisible}) => {
-          return (
-            <Container>
-              <div className="skillbar">
-                <div className="skillbar-title" style={isVisible ? value.active : value.before}>
-                  <span>
-                    {value.text}
-                  </span>
-                </div>
+  return (<div>{
+  values.map((value, i) =>
+    <TrackVisibility once key={i}>
+    {
+      ({isVisible}) => {
+        return (
+          <Container>
+            <div className="skillbar">
+              <div className="skillbar-title" style={isVisible ? value.active : value.before}>
+                <span>
+                  {value.text}
+                </span>
               </div>
-            </Container>
-          )
-        }}
-        </TrackVisibility>
-    );
-  });
-  return views;
+            </div>
+          </Container>
+        )
+      }
+    }
+    </TrackVisibility>
+    )}</div>)
 }
 
 export default ShowSkills;
