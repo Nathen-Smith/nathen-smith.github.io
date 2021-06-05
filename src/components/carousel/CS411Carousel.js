@@ -58,7 +58,7 @@ const Description = () => {
       </a>
       <hr />
       <p className="project-text">
-        A student matching system that allows users to customize their profile and set preferences 
+        A student matching web app that allows users to customize their profile and set preferences 
         to find a desired study buddy or project partner through CRUD functionality and SQL Stored Procedures. 
         The stack is React.js, Flask, MySQL.
         <br /><br />

@@ -12,7 +12,7 @@ const values = [
   {
     text: "Linux",
     before: {width: '0%', background: '#A1A1A4'},
-    active: {transition: '3s', background: '#A1A1A4', width: '40%' }
+    active: {transition: '3s', background: '#A1A1A4', width: '55%' }
   },
   {
     text: "Go",
@@ -33,7 +33,7 @@ const values = [
   {
     text: "NOSQL",
     before: {width: '0%', background: '#4DB33D'},
-    active: {transition: '3s', background: '#4DB33D', width: '55%' }
+    active: {transition: '3s', background: '#4DB33D', width: '50%' }
   },
   {
     text: "C++",

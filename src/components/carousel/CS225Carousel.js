@@ -55,10 +55,11 @@ const Description = () => {
       <p className="project-text">
         Integrated a Twitter dataset into a directed graph data structure by parsing related files
         for an inputted ego node and assigning edge weights based off the intersection of features 
-        of the respective nodes. Applied Dijkstra’s Algorithm and Betweenness Centrality to determine 
+        of the respective nodes, written in C++. Applied Dijkstra’s Algorithm and Betweenness Centrality to determine 
         chains of influence and how influential a user is.
         <br /><br />
-        I deduced methods to create a correct graph for the dataset, developed tests for the constructed graph 
+        I deduced methods to create a correct graph for the dataset, implemented the algorithms
+        as described above, developed tests for the constructed graph 
         such as cycle detection, and verified the correctness of our implementations of the algorithms.
       </p>
       

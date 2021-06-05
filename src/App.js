@@ -9,6 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import MyNavbar from './components/MyNavbar'
 import CS411Carousel from './components/carousel/CS411Carousel'
 import CS225Carousel from './components/carousel/CS225Carousel'
+import { Container } from 'react-bootstrap';
 // import { Container } from 'react-bootstrap';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -20,46 +21,92 @@ const Layout = () => {
   const screenType = useScreenType();
 
   if (screenType === "3-cols" || screenType === "2-cols") {
-    return (
-    
-      <div style={{background:'#292c33'}}>
-       <MyNavbar />
-      <div id="intro">
-        <h1 style={{fontSize:'60px'}}>Hi.</h1>
-        <h2>I'm Nathen Smith.</h2>
+    return (  
+      <div>
+        <MyNavbar />
+        {/* <div id="intro"> */}
+          <h1 style={{fontSize:'140px'}}>Hi.</h1>
+          <h2>I'm Nathen Smith.</h2>
+        {/* </div> */}
+        {/* <div id="portfolio"> */}
+          <CS411Carousel />
+          <CS225Carousel />
+        {/* </div> */}
+
+        <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing" className="document-link" style={{textDecoration:'none'}}>
+          <p className='document-link'>
+            My Resume
+            </p>
+        </a>
+
+        <h3 style={{height:'1000px'}}>Scroll down:)</h3>
+
+        <div style={{display:'flex', flexDirection:'row'}}>
+          <Container>
+            <p className="projct-text" style={{color:'white'}}>
+              Hello I am under the water pls hepl me
+            </p>
+          </Container>
+          <Container>
+            <ShowSkills />
+          </Container>
         </div>
 
-        <CS411Carousel />
 
-        <CS225Carousel />
-
-        
-        <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-        <div>
-        {/* <a href="http://localhost:3000/personal-site#about"> */}
         <div style={{width:'60%',margin:'auto',padding:'10px'}}>
-          <div id="about">
-            <ShowSkills />
-          </div>
+          {/* <div id="about"> */}
+            {/* <ShowSkills /> */}
+          {/* </div> */}
           <div id="contact" style={{display:'block'}}>
             <Links />
           </div>
-        </div>
         </div>
       </div>
     );
   }
 
+  // if (screenType === "1-cols") {
+  //   return (  
+  //     <div>
+  //       <MyNavbar />
+  //       <div id="intro">
+  //         <h1 style={{fontSize:'60px'}}>Hi.</h1>
+  //         <h2>I'm Nathen Smith.</h2>
+  //       </div>
+  //       <div id="portfolio">
+  //         <CS411Carousel />
+  //         <CS225Carousel />
+  //       </div>
+
+  //       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
+
+  //       <div style={{width:'60%',margin:'auto',padding:'10px'}}>
+  //         <div id="about">
+  //           <ShowSkills />
+  //         </div>
+  //         <div id="contact" style={{display:'block'}}>
+  //           <Links />
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+
   return (
     <div>
-      <div style={{background:'#292c33'}}>
+      <div>
       <MyNavbar />
       <h1 style={{fontSize:'100px'}}>Hi.</h1>
       <h2>I'm Nathen Smith.</h2>
-
+      {/* <div id="portfolio"> */}
         <CS411Carousel />
-
         <CS225Carousel />
+      {/* </div> */}
+      <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing" className="document-link" style={{textDecoration:'none'}}>
+        <p className='document-link'>
+          My Resume
+          </p>
+      </a>
 
       
 
@@ -68,9 +115,9 @@ const Layout = () => {
 
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
       <div style={{margin:'auto',padding:'16px'}}>
-        <div id="about">
+        {/* <div id="about"> */}
           <ShowSkills />
-        </div>
+        {/* </div> */}
         <div id="contact">
           <Links />
         </div>

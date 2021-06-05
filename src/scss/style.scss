@@ -12,11 +12,6 @@ h6 {
   margin-bottom: 0%;
 }
 
-h3 {
-  // font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  @include serif-font
-}
-
 a {
   color: #FFF;
 }
@@ -148,5 +143,18 @@ hr {
 }
 
 .project-title {
-  color: rgba(255, 255, 255, .8);
+  color: white;
+  opacity: 0.8;
+}
+
+.project-title:hover {
+  opacity: 1.0;
+}
+
+.document-link {
+  color: rgba(255, 255, 255, .6);
+}
+
+.document-link:hover {
+  color: rgba(255, 255, 255, 1.0)
 }
