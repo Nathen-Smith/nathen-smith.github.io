@@ -1,11 +1,11 @@
-import { Container } from 'react-bootstrap'
-import Carousel from 'react-bootstrap/Carousel'
-import '../../scss/style.scss'
-import CS411_1 from './CS411Photos/1-login.jpg'
-import CS411_2 from './CS411Photos/2-user.jpg'
-import CS411_3 from './CS411Photos/3-skills.jpg'
-import CS411_4 from './CS411Photos/4-liked.jpg'
-import CS411_5 from './CS411Photos/5-likes.jpg'
+import { Container } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
+import '../../scss/style.scss';
+import CS411_1 from './CS411Photos/1-login.jpg';
+import CS411_2 from './CS411Photos/2-user.jpg';
+import CS411_3 from './CS411Photos/3-skills.jpg';
+import CS411_4 from './CS411Photos/4-liked.jpg';
+import CS411_5 from './CS411Photos/5-likes.jpg';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,13 +15,15 @@ import useScreenType from "../../shared-hooks/useScreenType";
 fontawesome.library.add(brands)
 
 const MyCarousel = () => {
+
   return (
     <Carousel 
+      interval={null}
       style={{display:'inline-block'}} 
       nextIcon={<div className="dark"><span aria-hidden="true" className="carousel-control-next-icon" /></div>}
       prevIcon={<div className="dark"><span aria-hidden="true" className="carousel-control-prev-icon" /></div>}
     >
-      <Carousel.Item interval={10000}>
+      <Carousel.Item>
         <img className="d-block w-100" src={CS411_1} alt="CS411_1"/>
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>

@@ -1,10 +1,10 @@
-import { Container } from 'react-bootstrap'
-import Carousel from 'react-bootstrap/Carousel'
-import '../../scss/style.scss'
-import CS225_1 from './CS225Photos/1_Intro.jpg'
-import CS225_2 from './CS225Photos/2_data.jpg'
-import CS225_3 from './CS225Photos/3_graph.jpg'
-import CS225_4 from './CS225Photos/4_dijkstra.jpg'
+import { Container } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
+import '../../scss/style.scss';
+import CS225_1 from './CS225Photos/1_Intro.jpg';
+import CS225_2 from './CS225Photos/2_data.jpg';
+import CS225_3 from './CS225Photos/3_graph.jpg';
+import CS225_4 from './CS225Photos/4_dijkstra.jpg';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,25 +14,27 @@ import useScreenType from "../../shared-hooks/useScreenType";
 fontawesome.library.add(brands)
 
 const MyCarousel = () => {
+
   return (
     <Carousel 
+      interval={null}
       style={{display:'inline-block'}} 
       nextIcon={<div className="dark"><span aria-hidden="true" className="carousel-control-next-icon" /></div>}
       prevIcon={<div className="dark"><span aria-hidden="true" className="carousel-control-prev-icon" /></div>}
     >
-      <Carousel.Item interval={10000}>
+      <Carousel.Item>
         <img className="d-block w-100" src={CS225_1} alt="CS411_1"/>
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={10000}>
+      <Carousel.Item>
         <img className="d-block w-100" src={CS225_2} alt="CS411_2"/>
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={10000}>
+      <Carousel.Item>
         <img className="d-block w-100" src={CS225_3} alt="CS411_3"/>
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={10000}>
+      <Carousel.Item>
         <img className="d-block w-100" src={CS225_4} alt="CS411_4"/>
         <Carousel.Caption></Carousel.Caption>
       </Carousel.Item>
