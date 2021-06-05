@@ -9,6 +9,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import MyNavbar from './components/MyNavbar'
 import CS411Carousel from './components/carousel/CS411Carousel'
 import CS225Carousel from './components/carousel/CS225Carousel'
+import { Container } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 fontawesome.library.add(brands)
 
@@ -28,6 +30,7 @@ const Layout = () => {
         </div>
         <CS411Carousel />
         <CS225Carousel />
+        
         <h3 style={{height:'1000px'}}>Scroll down:)</h3>
         <div>
         {/* <a href="http://localhost:3000/personal-site#about"> */}
@@ -48,10 +51,22 @@ const Layout = () => {
     <div>
       <div style={{background:'#292c33'}}>
       <MyNavbar />
-      <h1 style={{fontSize:'100px'}}>henlo fren</h1>
+      <h1 style={{fontSize:'100px'}}>Hi.</h1>
       <h2>I'm Nathen Smith.</h2>
-      <CS411Carousel />
-      <CS225Carousel />
+      <div style={{display:'inline'}}>
+        <CS411Carousel style={{width:'80%'}}/>
+      </div>
+      <div style={{display:'inline'}}>
+        <h3>pls</h3>
+      </div>
+
+        <h3>
+          ok
+        </h3>
+
+
+      {/* </div> */}
+      <CS225Carousel style={{width:'80%'}}/>
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
       <div style={{margin:'auto',padding:'16px'}}>
         <div id="about">
