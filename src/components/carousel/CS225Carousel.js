@@ -98,7 +98,7 @@ const CS225Carousel = () => {
 
   return (
     <div style={{display:'flex', flexDirection:'column'}}>
-      <Container style={{display:'inline-block', width:'85%'}}>
+      <Container style={{display:'inline-block', width:'95%'}}>
         <MyCarousel />
       </Container>
       <Container>
