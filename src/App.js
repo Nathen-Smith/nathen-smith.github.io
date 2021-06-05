@@ -9,8 +9,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import MyNavbar from './components/MyNavbar'
 import CS411Carousel from './components/carousel/CS411Carousel'
 import CS225Carousel from './components/carousel/CS225Carousel'
-import { Container } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { Container } from 'react-bootstrap';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 fontawesome.library.add(brands)
 
@@ -19,7 +19,7 @@ fontawesome.library.add(brands)
 const Layout = () => {
   const screenType = useScreenType();
 
-  if(screenType === "3-cols" || screenType === "2-cols") {
+  if (screenType === "3-cols" || screenType === "2-cols") {
     return (
     
       <div style={{background:'#292c33'}}>
@@ -28,8 +28,11 @@ const Layout = () => {
         <h1 style={{fontSize:'60px'}}>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         </div>
+
         <CS411Carousel />
+
         <CS225Carousel />
+
         
         <h3 style={{height:'1000px'}}>Scroll down:)</h3>
         <div>
@@ -53,20 +56,16 @@ const Layout = () => {
       <MyNavbar />
       <h1 style={{fontSize:'100px'}}>Hi.</h1>
       <h2>I'm Nathen Smith.</h2>
-      <div style={{display:'inline'}}>
-        <CS411Carousel style={{width:'80%'}}/>
-      </div>
-      <div style={{display:'inline'}}>
-        <h3>pls</h3>
-      </div>
 
-        <h3>
-          ok
-        </h3>
+        <CS411Carousel />
+
+        <CS225Carousel />
+
+      
 
 
       {/* </div> */}
-      <CS225Carousel style={{width:'80%'}}/>
+
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
       <div style={{margin:'auto',padding:'16px'}}>
         <div id="about">

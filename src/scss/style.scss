@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include sans-serif-font;
+  @include github-md-font;
   color: rgba(255, 255, 255, .9);
   margin-top: 0%;
   margin-bottom: 0%;
@@ -120,4 +120,33 @@ div.dark {
 
 .carousel-indicators li {
   background-color: #888;
+}
+
+.project-title {
+  color: white;
+}
+
+.project-link {
+  color:white;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  opacity: 1.0;
+}
+
+hr {
+  color: white;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-top-color: rgba(255, 255, 255, .4);
+}
+
+.project-text {
+  color: rgba(255, 255, 255, .6);
+}
+
+.project-title {
+  color: rgba(255, 255, 255, .8);
 }
