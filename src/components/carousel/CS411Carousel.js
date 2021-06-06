@@ -14,6 +14,8 @@ import useScreenType from "../../shared-hooks/useScreenType";
 
 fontawesome.library.add(brands)
 
+const items = [CS411_1, CS411_2, CS411_3, CS411_4, CS411_5]
+
 const MyCarousel = () => {
 
   return (
@@ -23,26 +25,11 @@ const MyCarousel = () => {
       nextIcon={<div className="dark"><span aria-hidden="true" className="carousel-control-next-icon" /></div>}
       prevIcon={<div className="dark"><span aria-hidden="true" className="carousel-control-prev-icon" /></div>}
     >
-      <Carousel.Item>
-        <img className="d-block w-100" src={CS411_1} alt="CS411_1"/>
-        <Carousel.Caption></Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={CS411_2} alt="CS411_2"/>
-        <Carousel.Caption></Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={CS411_3} alt="CS411_3"/>
-        <Carousel.Caption></Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={CS411_4} alt="CS411_4"/>
-        <Carousel.Caption></Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img className="d-block w-100" src={CS411_5} alt="CS411_5"/>
-        <Carousel.Caption></Carousel.Caption>
-      </Carousel.Item>
+      {items.map((item, i) =>
+        <Carousel.Item key={i}>
+          <img className="d-block w-100" src={item} alt="CS411"/>
+        </Carousel.Item>
+      )}      
     </Carousel>
   );
 }
