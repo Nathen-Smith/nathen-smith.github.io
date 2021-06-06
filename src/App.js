@@ -43,7 +43,7 @@ const Layout = () => {
 
         <div style={{display:'flex', flexDirection:'row'}}>
           <Container>
-            <p className="projct-text" style={{color:'white'}}>
+            <p className="project-text" style={{color:'white'}}>
               Hello I am under the water pls hepl me
             </p>
           </Container>
@@ -65,32 +65,41 @@ const Layout = () => {
     );
   }
 
-  // if (screenType === "1-cols") {
-  //   return (  
-  //     <div>
-  //       <MyNavbar />
-  //       <div id="intro">
-  //         <h1 style={{fontSize:'60px'}}>Hi.</h1>
-  //         <h2>I'm Nathen Smith.</h2>
-  //       </div>
-  //       <div id="portfolio">
-  //         <CS411Carousel />
-  //         <CS225Carousel />
-  //       </div>
+  if (screenType === "1-cols") {
+    return (  
+      <div>
+      <div>
+      <MyNavbar />
+      <h1 style={{fontSize:'100px'}}>Hi.</h1>
+      <h2>I'm Nathen Smith.</h2>
+      {/* <div id="portfolio"> */}
+        <CS411Carousel />
+        <CS225Carousel />
+      {/* </div> */}
+      <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing" className="document-link" style={{textDecoration:'none'}}>
+        <p className='document-link'>
+          My Resume
+          </p>
+      </a>
 
-  //       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
+      
 
-  //       <div style={{width:'60%',margin:'auto',padding:'10px'}}>
-  //         <div id="about">
-  //           <ShowSkills />
-  //         </div>
-  //         <div id="contact" style={{display:'block'}}>
-  //           <Links />
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+
+      {/* </div> */}
+
+      <h3 style={{height:'1000px'}}>Scroll down:)</h3>
+      <div style={{margin:'auto',padding:'16px'}}>
+        {/* <div id="about"> */}
+          <ShowSkills />
+        {/* </div> */}
+        <div id="contact">
+          <Links />
+        </div>
+      </div>
+      </div>
+    </div> 
+    );
+  }
 
   return (
     <div>

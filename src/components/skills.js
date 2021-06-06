@@ -37,8 +37,8 @@ const values = [
   },
   {
     text: "C++",
-    before: {width: '0%', background: '#5E97D0'},
-    active: {transition: '3s', background: '#5E97D0', width: '75%' }
+    before: {width: '0%', background: '#f34b7d'},
+    active: {transition: '3s', background: '#f34b7d', width: '75%' }
   },
   {
     text: "Github",
