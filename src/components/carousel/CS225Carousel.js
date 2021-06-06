@@ -86,7 +86,7 @@ const CS225Carousel = () => {
 
   if (screenType === "1-cols") {
     return (
-      <div style={{display:'flex', flexDirection:'row'}}>
+      <div style={{display:'flex', flexDirection:'column'}}>
         <Container style={{display:'inline-block', width:'75%',marginTop:'15px'}}>
           <MyCarousel />
         </Container>
