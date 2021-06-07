@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
-import TrackVisibility from 'react-on-screen';
 import { Container } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { NavHashLink } from 'react-router-hash-link';
 import useScreenType from "./shared-hooks/useScreenType";
+import { InView } from 'react-intersection-observer';
 
 import ShowSkills from './components/ShowSkills';
 import Links from './components/Links';
@@ -25,13 +25,10 @@ fontawesome.library.add(brands)
 function Layout(props) {
   const type = props.type; // just support fullscreen and mobile view for now=> we can simply use ternary operator
   const height = window.innerHeight;
-  const [visibleNav, setVisibleNav] = useState(false); // unfortunately can't maintain DRY with the Navbar, needs a parent for the color change
+  const [visibleNav, setVisibleNav] = useState(true); // unfortunately can't maintain DRY with the Navbar, needs a parent for the color change
   return (  
     <div>
-      <TrackVisibility>
-        {({isVisible}) => {isVisible ? setVisibleNav(true) : setVisibleNav(false)}}
-      </TrackVisibility>
-      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.5s', transitionDelay:'0.1s'}}>
+      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.5s linear'}}>
         <NavHashLink to="#">
           <Navbar.Brand className="nathen">
               Nathen Smith
@@ -52,14 +49,14 @@ function Layout(props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <div id="intro" style={{height:height}}>
+
+      <InView as="div" id="intro" onChange={setVisibleNav} style={{height:height}}>
         <h1>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         <p className='light'>Computer Engineering at University of Illinois at Urbana-Champaign.</p>
         <p className='light'>React.js and Python Enthusiast.</p>
         <p className='light'>Badminton player.</p>
-      </div>
-
+      </InView>
 
       <div style={type==='lg' ? {display:'flex', flexDirection:'row'} : {display:'flex', flexDirection:'column'}}>
         <Container>
@@ -79,13 +76,12 @@ function Layout(props) {
 
       <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing">
         <p className='document-link'>
-          My Resume <FontAwesomeIcon icon={faFilePdf} size='md' style={{marginLeft:'3px'}} />
+          My Resume <FontAwesomeIcon icon={faFilePdf} style={{marginLeft:'3px'}} />
         </p>
       </a>
 
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
 
-      
 
       {/* <div style={{width:'60%',margin:'auto',padding:'10px'}}> */}
         {/* <div id="about"> */}
