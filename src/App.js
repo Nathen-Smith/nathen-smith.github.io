@@ -25,10 +25,10 @@ fontawesome.library.add(brands)
 const Layout = (props) => {
   const type = props.type; // just support fullscreen and mobile view for now=> we can simply use ternary operator
   const height = window.innerHeight;
-  const [visible, setVisible] = useState(false); // unfortunately can't maintain DRY with the Navbar, needs a parent for the color change
+  const [visibleNav, setVisibleNav] = useState(false); // unfortunately can't maintain DRY with the Navbar, needs a parent for the color change
   return (  
     <div>
-      <Navbar collapseOnSelect bg={visible ? "dark" : "light"} expand="md" sticky="top" variant={visible ? "dark" : "light"} style={{transition:'0.4s'}}>
+      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.4s'}}>
         <NavHashLink smooth to="#">
           <Navbar.Brand className="nathen">
               Nathen Smith
@@ -57,7 +57,7 @@ const Layout = (props) => {
         <p className='light'>Badminton player.</p>
       </div>
       <TrackVisibility>
-        {({isVisible}) => {isVisible ? setVisible(true) : setVisible(false)}}
+        {({isVisible}) => {isVisible ? setVisibleNav(true) : setVisibleNav(false)}}
       </TrackVisibility>
       {/* <div id="portfolio"> */}
         <CS411Carousel />
