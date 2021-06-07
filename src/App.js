@@ -22,13 +22,16 @@ import './scss/style.scss';
 
 fontawesome.library.add(brands)
 
-const Layout = (props) => {
+function Layout(props) {
   const type = props.type; // just support fullscreen and mobile view for now=> we can simply use ternary operator
   const height = window.innerHeight;
   const [visibleNav, setVisibleNav] = useState(false); // unfortunately can't maintain DRY with the Navbar, needs a parent for the color change
   return (  
     <div>
-      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.4s'}}>
+      <TrackVisibility>
+        {({isVisible}) => {isVisible ? setVisibleNav(true) : setVisibleNav(false)}}
+      </TrackVisibility>
+      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.5s', transitionDelay:'0.1s'}}>
         <NavHashLink to="#">
           <Navbar.Brand className="nathen">
               Nathen Smith
@@ -56,8 +59,7 @@ const Layout = (props) => {
         <p className='light'>React.js and Python Enthusiast.</p>
         <p className='light'>Badminton player.</p>
       </div>
-      <TrackVisibility>
-        {({isVisible}) => {isVisible ? setVisibleNav(true) : setVisibleNav(false)}}
+
 
       <div style={type==='lg' ? {display:'flex', flexDirection:'row'} : {display:'flex', flexDirection:'column'}}>
         <Container>
@@ -93,7 +95,7 @@ const Layout = (props) => {
           <Links />
         </div>
       {/* </div> */}
-      </TrackVisibility>
+      
     </div>
   );
 }
