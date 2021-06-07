@@ -12,6 +12,10 @@ h6 {
   margin-bottom: 0%;
 }
 
+h1 {
+  font-size: 1000%;
+}
+
 a {
   color: #FFF;
 }
@@ -152,9 +156,18 @@ hr {
 }
 
 .document-link {
-  color: rgba(255, 255, 255, .6);
+  color: rgba(255, 255, 255, .8);
+  display: inline-block;
+  text-decoration-color: rgba($color: white, $alpha: 0.6);
+  // text-decoration: rgba(255, 255, 255, .9);
 }
 
 .document-link:hover {
-  color: rgba(255, 255, 255, 1.0)
+  color: rgba(255, 255, 255, 1.0);
+  text-decoration-color: rgba($color: white, $alpha: 1.0);
+}
+
+p.light {
+  color: rgba(255, 255, 255, .6);
+  margin-bottom: 2px;
 }

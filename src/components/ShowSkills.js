@@ -1,6 +1,6 @@
 import React from 'react';
 import TrackVisibility from 'react-on-screen';
-import {values} from './skills';
+import { values } from './skills';
 import '../scss/style.scss';
 import { Container } from 'react-bootstrap';
 

@@ -39,15 +39,6 @@ const MyNavbar = () => {
       </NavHashLink>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-      {/* <Nav className="mr-auto"> */}
-        {/* <NavHashLink smooth to="#about">
-          <Navbar.Brand className="font-weight-bold">
-              About
-          </Navbar.Brand>
-        </NavHashLink> */}
-        
-        
-        {/* </Nav> */}
         <Nav className="ml-auto">
         <Nav.Link href="#about">About</Nav.Link>
         <Nav.Link href="#portfolio">Portfolio</Nav.Link>
@@ -59,12 +50,6 @@ const MyNavbar = () => {
             <FontAwesomeIcon icon={faLinkedinIn} size="lg" className="navlink"></FontAwesomeIcon>
           </Nav.Link>
         </Nav>
-        
-        {/* <Nav>
-          <Github />
-          <LinkedIn />
-          <Email />
-        </Nav> */}
       </Navbar.Collapse>
     </Navbar>
   )

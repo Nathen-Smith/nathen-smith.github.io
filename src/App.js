@@ -1,138 +1,98 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import TrackVisibility from 'react-on-screen';
+import { Container } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import { NavHashLink } from 'react-router-hash-link';
+import useScreenType from "./shared-hooks/useScreenType";
+
 import ShowSkills from './components/ShowSkills';
 import Links from './components/Links';
-import fontawesome from '@fortawesome/fontawesome';
-import brands from '@fortawesome/fontawesome-free-brands';
-import useScreenType from "./shared-hooks/useScreenType";
-import './scss/style.scss';
-import { BrowserRouter as Router } from 'react-router-dom';
-import MyNavbar from './components/MyNavbar'
 import CS411Carousel from './components/carousel/CS411Carousel'
 import CS225Carousel from './components/carousel/CS225Carousel'
-import { Container } from 'react-bootstrap';
-// import { Container } from 'react-bootstrap';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import fontawesome from '@fortawesome/fontawesome';
+import brands from '@fortawesome/fontawesome-free-brands';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import './scss/style.scss';
 
 fontawesome.library.add(brands)
 
-
-
-const Layout = () => {
-  const screenType = useScreenType();
-
-  if (screenType === "3-cols" || screenType === "2-cols") {
-    return (  
-      <div>
-        <MyNavbar />
-        {/* <div id="intro"> */}
-          <h1 style={{fontSize:'140px'}}>Hi.</h1>
-          <h2>I'm Nathen Smith.</h2>
-        {/* </div> */}
-        {/* <div id="portfolio"> */}
-          <CS411Carousel />
-          <CS225Carousel />
-        {/* </div> */}
-
-        <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing" className="document-link" style={{textDecoration:'none'}}>
-          <p className='document-link'>
-            My Resume
-            </p>
-        </a>
-
-        <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-
-        <div style={{display:'flex', flexDirection:'row'}}>
-          <Container>
-            <p className="project-text" style={{color:'white'}}>
-              Hello I am under the water pls hepl me
-            </p>
-          </Container>
-          <Container>
-            <ShowSkills />
-          </Container>
-        </div>
-
-
-        <div style={{width:'60%',margin:'auto',padding:'10px'}}>
-          {/* <div id="about"> */}
-            {/* <ShowSkills /> */}
-          {/* </div> */}
-          <div id="contact" style={{display:'block'}}>
-            <Links />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (screenType === "1-cols") {
-    return (  
-      <div>
-      <div>
-      <MyNavbar />
-      <h1 style={{fontSize:'100px'}}>Hi.</h1>
-      <h2>I'm Nathen Smith.</h2>
-      {/* <div id="portfolio"> */}
-        <CS411Carousel />
-        <CS225Carousel />
-      {/* </div> */}
-      <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing" className="document-link" style={{textDecoration:'none'}}>
-        <p className='document-link'>
-          My Resume
-          </p>
-      </a>
-
-      
-
-
-      {/* </div> */}
-
-      <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-      <div style={{margin:'auto',padding:'16px'}}>
-        {/* <div id="about"> */}
-          <ShowSkills />
-        {/* </div> */}
-        <div id="contact">
-          <Links />
-        </div>
-      </div>
-      </div>
-    </div> 
-    );
-  }
-
-  return (
+const Layout = (props) => {
+  const type = props.type; // just support fullscreen and mobile view for now=> we can simply use ternary operator
+  const height = window.innerHeight;
+  const [visible, setVisible] = useState(false); // unfortunately can't maintain DRY with the Navbar, needs a parent for the color change
+  return (  
     <div>
-      <div>
-      <MyNavbar />
-      <h1 style={{fontSize:'100px'}}>Hi.</h1>
-      <h2>I'm Nathen Smith.</h2>
+      <Navbar collapseOnSelect bg={visible ? "dark" : "light"} expand="md" sticky="top" variant={visible ? "dark" : "light"} style={{transition:'0.4s'}}>
+        <NavHashLink smooth to="#">
+          <Navbar.Brand className="nathen">
+              Nathen Smith
+          </Navbar.Brand>
+        </NavHashLink>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link href="#about" >About</Nav.Link>
+            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+            <Nav.Link href="https://github.com/Nathen-Smith">
+              <FontAwesomeIcon icon={faGithub} size="lg" className="navbar-dark"></FontAwesomeIcon>
+            </Nav.Link>
+            <Nav.Link href="https://www.linkedin.com/in/nathen-s-324378141">
+              <FontAwesomeIcon icon={faLinkedinIn} size="lg" className="navbar-dark"></FontAwesomeIcon>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <div id="intro" style={{height:height * 0.66}}>
+        <h1>Hi.</h1>
+        <h2>I'm Nathen Smith.</h2>
+        <p className='light'>Computer Engineering at University of Illinois at Urbana-Champaign.</p>
+        <p className='light'>React.js and Python Enthusiast.</p>
+        <p className='light'>Badminton player.</p>
+      </div>
+      <TrackVisibility>
+        {({isVisible}) => {isVisible ? setVisible(true) : setVisible(false)}}
+      </TrackVisibility>
       {/* <div id="portfolio"> */}
         <CS411Carousel />
         <CS225Carousel />
       {/* </div> */}
-      <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing" className="document-link" style={{textDecoration:'none'}}>
+
+      <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing">
         <p className='document-link'>
-          My Resume
-          </p>
+          My Resume <FontAwesomeIcon icon={faFilePdf} size='md' style={{marginLeft:'3px'}} />
+        </p>
       </a>
 
-      
-
-
-      {/* </div> */}
-
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
-      <div style={{margin:'auto',padding:'16px'}}>
-        {/* <div id="about"> */}
+
+      <div style={type==='lg' ? {display:'flex', flexDirection:'row'} : {display:'flex', flexDirection:'column'}}>
+        <Container>
+          <p className="light-text">
+            Hello I am under the water pls hepl me
+          </p>
+        </Container>
+        <Container>
           <ShowSkills />
+        </Container>
+      </div>
+
+
+      {/* <div style={{width:'60%',margin:'auto',padding:'10px'}}> */}
+        {/* <div id="about"> */}
+          {/* <ShowSkills /> */}
         {/* </div> */}
-        <div id="contact">
+        <div id="contact" style={{display:'block', marginBottom:'50px'}}>
           <Links />
         </div>
-      </div>
-      </div>
-    </div> 
+      {/* </div> */}
+    </div>
   );
 }
 
@@ -142,12 +102,23 @@ const App = () => {
       window.location.replace("")
     }
   }
+
+  const screenType = useScreenType();
+
+  if (screenType === "3-cols" || screenType === "2-cols") {
+    return (
+      <Router>
+        <Layout type='lg'/>
+      </Router>
+    );
+  }
+
   return (
     <Router>
-      <Layout />
+      <Layout type='sm' />
     </Router>
     
-  );
+   );
 }
 
 export default App;
