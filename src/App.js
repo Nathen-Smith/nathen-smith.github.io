@@ -58,7 +58,6 @@ const Layout = (props) => {
       </div>
       <TrackVisibility>
         {({isVisible}) => {isVisible ? setVisibleNav(true) : setVisibleNav(false)}}
-      </TrackVisibility>
 
       <div style={type==='lg' ? {display:'flex', flexDirection:'row'} : {display:'flex', flexDirection:'column'}}>
         <Container>
@@ -94,6 +93,7 @@ const Layout = (props) => {
           <Links />
         </div>
       {/* </div> */}
+      </TrackVisibility>
     </div>
   );
 }
