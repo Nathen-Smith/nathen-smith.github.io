@@ -1,5 +1,4 @@
 import React from 'react';
-import TrackVisibility from 'react-on-screen';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +6,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import './links.css';
 import useScreenType from "../shared-hooks/useScreenType";
+import { InView } from 'react-intersection-observer';
 
 fontawesome.library.add(brands)
 
@@ -25,56 +25,42 @@ const links = [
   }
 ]
 
-const LinksRow = ({isVisible}) => {
-  return (
-    <div style={{marginLeft:'auto', marginRight:'auto', display:'block',width:'320px'}}>
-      <a href={links[0].link} >
-        <FontAwesomeIcon icon={links[0].icon}
-          style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
-        />
-      </a>
-      <a href={links[1].link} >
-        <FontAwesomeIcon icon={links[1].icon}
-          style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'30px',marginLeft:'30px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'30px',marginLeft:'30px'}}
-        />
-      </a>
-      <a href={links[2].link} >
-        <FontAwesomeIcon icon={links[2].icon}
-          style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'5px',marginLeft:'5px'}}
-        />
-      </a>
-    </div>
-  );
-}
-
 const Links = () => {
   const screenType = useScreenType();
   if (screenType === "3-cols" || screenType === "2-cols") {
+    // row view
     return (
-      <TrackVisibility once>
-        <LinksRow />      
-      </TrackVisibility>
+      <InView triggerOnce={true}>
+        {({ ref, inView }) => (
+          <div ref={ref} style={{marginLeft:'auto', marginRight:'auto', display:'block',width:'540px'}}>
+            {links.map((link, i) => 
+              <a href={link.link} >
+                <FontAwesomeIcon icon={link.icon}
+                  style={inView ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'50px',marginLeft:'50px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'50px',marginLeft:'50px'}}
+                />
+              </a>
+            )}
+          </div>
+        )}
+      </InView>
     )
   }
-  // if (screenType === "mobile" || screenType === "1-cols" || screenType === "2-cols") {
-    return (
-      links.map((link, i) => 
-          <TrackVisibility once key={i}>
-            {({isVisible}) => {
-              return (
-                <a href={link.link} >
-                  <FontAwesomeIcon icon={link.icon}
-                    style={isVisible ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
-                  />
-                </a>
-              )
-            }}
-          </TrackVisibility>
-      )
-    );
-
-  // }
-
+  // column view
+  return (
+    <div>
+      {links.map((link, i) => 
+        <InView as="div" triggerOnce={true} key={i}>
+          {({ ref, inView }) => (
+            <a href={link.link} ref={ref}>
+              <FontAwesomeIcon icon={link.icon}
+                style={inView ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
+              />
+            </a>
+          )}
+        </InView>
+      )}
+    </div>
+  );
 }
 
 export default Links;

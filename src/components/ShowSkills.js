@@ -20,7 +20,7 @@ const ShowSkills = () => {
         </Container>
       )}
     </InView>
-  )}</div>)
+  )}</div>);
 }
 
 export default ShowSkills;
