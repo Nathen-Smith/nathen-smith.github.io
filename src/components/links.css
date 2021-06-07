@@ -1,31 +1,31 @@
 @keyframes bounceIn {
-    0%, 100%, 20%, 40%, 60%, 80% {
-        transition-timing-function: cubic-bezier(0.215,.61,.355,1);
-    }
+  0%, 100%, 20%, 40%, 60%, 80% {
+    transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+  }
 
-    0% {
-        transform: scale3d(.3,.3,.3);
-        visibility: visible;
-    }
-    20% {
-        transform: scale3d(1.1,1.1,1.1);
-        visibility: visible;
-    }
-    40% {
-        transform: scale3d(.9,.9,.9);
-        visibility: visible;
-    }
-    60% {
-        transform: scale3d(1.03,1.03,1.03);
-        visibility: visible;
-    }
-    80% {
-        transform: scale3d(.97,.97,.97);
-        visibility: visible;
-    }
-    100% {
-        transform: scale3d(1,1,1);
-        visibility: visible;
-    }
+  0% {
+    transform: scale3d(.3,.3,.3);
+    visibility: visible;
+  }
+  20% {
+    transform: scale3d(1.1,1.1,1.1);
+    visibility: visible;
+  }
+  40% {
+    transform: scale3d(.9,.9,.9);
+    visibility: visible;
+  }
+  60% {
+    transform: scale3d(1.03,1.03,1.03);
+    visibility: visible;
+  }
+  80% {
+    transform: scale3d(.97,.97,.97);
+    visibility: visible;
+  }
+  100% {
+    transform: scale3d(1,1,1);
+    visibility: visible;
+  }
 
 }

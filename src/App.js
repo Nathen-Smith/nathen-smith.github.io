@@ -29,7 +29,7 @@ const Layout = (props) => {
   return (  
     <div>
       <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.4s'}}>
-        <NavHashLink smooth to="#">
+        <NavHashLink to="#">
           <Navbar.Brand className="nathen">
               Nathen Smith
           </Navbar.Brand>
@@ -41,15 +41,15 @@ const Layout = (props) => {
             <Nav.Link href="#portfolio">Portfolio</Nav.Link>
             <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link href="https://github.com/Nathen-Smith">
-              <FontAwesomeIcon icon={faGithub} size="lg" className="navbar-dark"></FontAwesomeIcon>
+              <FontAwesomeIcon icon={faGithub} size="lg" className={visibleNav ? "navbar-dark" : "navbar-light"}></FontAwesomeIcon>
             </Nav.Link>
             <Nav.Link href="https://www.linkedin.com/in/nathen-s-324378141">
-              <FontAwesomeIcon icon={faLinkedinIn} size="lg" className="navbar-dark"></FontAwesomeIcon>
+              <FontAwesomeIcon icon={faLinkedinIn} size="lg" className={visibleNav ? "navbar-dark" : "navbar-light"}></FontAwesomeIcon>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <div id="intro" style={{height:height * 0.66}}>
+      <div id="intro" style={{height:height}}>
         <h1>Hi.</h1>
         <h2>I'm Nathen Smith.</h2>
         <p className='light'>Computer Engineering at University of Illinois at Urbana-Champaign.</p>
@@ -59,6 +59,18 @@ const Layout = (props) => {
       <TrackVisibility>
         {({isVisible}) => {isVisible ? setVisibleNav(true) : setVisibleNav(false)}}
       </TrackVisibility>
+
+      <div style={type==='lg' ? {display:'flex', flexDirection:'row'} : {display:'flex', flexDirection:'column'}}>
+        <Container>
+          <p className="light-text" style={{color:'white'}}>
+            More about me
+          </p>
+        </Container>
+        <Container>
+          <ShowSkills />
+        </Container>
+      </div>
+
       {/* <div id="portfolio"> */}
         <CS411Carousel />
         <CS225Carousel />
@@ -72,17 +84,7 @@ const Layout = (props) => {
 
       <h3 style={{height:'1000px'}}>Scroll down:)</h3>
 
-      <div style={type==='lg' ? {display:'flex', flexDirection:'row'} : {display:'flex', flexDirection:'column'}}>
-        <Container>
-          <p className="light-text">
-            Hello I am under the water pls hepl me
-          </p>
-        </Container>
-        <Container>
-          <ShowSkills />
-        </Container>
-      </div>
-
+      
 
       {/* <div style={{width:'60%',margin:'auto',padding:'10px'}}> */}
         {/* <div id="about"> */}
@@ -97,12 +99,6 @@ const Layout = (props) => {
 }
 
 const App = () => {
-  if (window.performance) {
-    if (performance.navigation.type === 1) {
-      window.location.replace("")
-    }
-  }
-
   const screenType = useScreenType();
 
   if (screenType === "3-cols" || screenType === "2-cols") {
@@ -117,8 +113,7 @@ const App = () => {
     <Router>
       <Layout type='sm' />
     </Router>
-    
-   );
+  );
 }
 
 export default App;
