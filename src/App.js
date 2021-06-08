@@ -28,7 +28,7 @@ function Layout(props) {
   const [visibleNav, setVisibleNav] = useState(true);
   return (  
     <div>
-      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.5s linear'}}>
+      <Navbar collapseOnSelect bg={(visibleNav && type==='lg') ? "dark" : "light"} expand="md" sticky="top" variant={(visibleNav && type==='lg')? "dark" : "light"} style={{transition:'0.5s linear'}}>
         <a className="navbar-brand nathen" href="#top">
           Nathen Smith
         </a>
