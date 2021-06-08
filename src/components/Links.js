@@ -16,7 +16,7 @@ const links = [
     icon: faGithub
   },
   {
-    link: "https://www.linkedin.com/in/nathen-s-324378141",
+    link: "https://www.linkedin.com/in/nathen-s-324378141/",
     icon: faLinkedin
   },
   {
