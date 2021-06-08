@@ -212,8 +212,11 @@ h2.title {
 hr.title {
   text-align: center;
   margin: auto;
-  width: 50px;
+  width: 60px;
   margin-bottom: 50px;
+  border: none;
+  height: 4px;
+  background-color: rgba(255, 255, 255, .9)
 }
 
 div.top {

@@ -36,7 +36,7 @@ const Links = () => {
             {links.map((link, i) => 
               <a href={link.link} >
                 <FontAwesomeIcon icon={link.icon}
-                  style={inView ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'50px',marginLeft:'50px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'50px',marginLeft:'50px'}}
+                  style={inView ? {animation: 'bounceIn 1.2s linear 1',animationDelay: '0.2s',color: 'white', width:'80px', height: '80px', display:'inline',marginRight:'50px',marginLeft:'50px',transition:'2s'} : {color: '#292c33', width:'80px', height: '80px', display:'inline',marginRight:'50px',marginLeft:'50px'}}
                 />
               </a>
             )}
@@ -53,7 +53,7 @@ const Links = () => {
           {({ ref, inView }) => (
             <a href={link.link} ref={ref}>
               <FontAwesomeIcon icon={link.icon}
-                style={inView ? {transform: 'scale(1)',animation: 'bounceIn 1s linear 1',animationDelay: '0.1s',color: 'white', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
+                style={inView ? {animation: 'bounceIn 1.2s linear 1',animationDelay: '0.2s',color: 'white', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px',transition:'2s'} : {color: '#292c33', width:'140px', height: '140px', display:'block',marginRight:'auto',marginLeft:'auto',marginBottom:'5px'}}
               />
             </a>
           )}
