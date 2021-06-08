@@ -142,8 +142,9 @@ hr {
   border-top-color: rgba(255, 255, 255, .4);
 }
 
-.project-text {
+.project-text, .background-text {
   color: rgba(255, 255, 255, .6);
+  font-size: large;
 }
 
 .project-title {
@@ -169,7 +170,8 @@ hr {
 
 p.light {
   color: rgba(255, 255, 255, .6);
-  margin-bottom: 2px;
+  margin-bottom: 5px;
+  font-weight: 120;
 }
 
 html {
@@ -180,4 +182,44 @@ html {
 	html {
 		scroll-behavior: auto;
 	}
+}
+
+.intro {
+  background: rgb(41,44,51);
+  background: linear-gradient(180deg, rgba(41,44,51,1) 0%, rgba(21,22,26,1) 70%, rgba(0,0,0,1) 100%);
+  // the gradient should be long with the center point about 3/10 towards the darker side of the gradient
+}
+
+.curved {
+  border-top-left-radius: 36px;
+  border-top-right-radius: 36px;
+  background-color: #242526;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+h2.title {
+  // margin-left: auto;
+  // margin-right: auto;
+  // display: block;
+  font-size: 300%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+hr.title {
+  text-align: center;
+  margin: auto;
+  width: 50px;
+  margin-bottom: 50px;
+}
+
+div.top {
+  background: rgb(52,58,64);
+  background: linear-gradient(180deg, rgba(52,58,64,1) 0%, rgba(47,51,58,1) 70%, rgba(41,44,51,1) 100%);
+}
+
+.container-intro {
+  margin-left: 0;
 }

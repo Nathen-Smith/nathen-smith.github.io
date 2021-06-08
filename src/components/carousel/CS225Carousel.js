@@ -50,7 +50,7 @@ const Description = () => {
         <br /><br />
         I deduced methods to create a correct graph for the dataset, implemented the algorithms
         as described above, developed tests for the constructed graph 
-        such as cycle detection, and verified the correctness of our implementations of the algorithms.
+        such as cycle detection, verifying the correctness of our implementations of the algorithms.
       </p>
       
     </div>
@@ -63,7 +63,7 @@ const CS225Carousel = () => {
 
   if (screenType === "3-cols" || screenType === "2-cols") {
     return (
-      <div style={{display:'flex', flexDirection:'row'}}>
+      <div style={{display:'flex', flexDirection:'row', marginLeft:'15px', marginRight:'15px'}}>
         <Container style={{display:'inline-block', width:'60%',marginTop:'15px'}}>
           <MyCarousel />
         </Container>

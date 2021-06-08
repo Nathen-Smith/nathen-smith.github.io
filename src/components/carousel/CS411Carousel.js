@@ -66,7 +66,7 @@ const CS411Carousel = () => {
 
   if (screenType === "3-cols" || screenType === "2-cols") {
     return (
-      <div style={{display:'flex', flexDirection:'row'}}>
+      <div style={{display:'flex', flexDirection:'row', marginLeft:'15px', marginRight:'15px'}}>
         <Container style={{display:'inline-block', width:'60%',marginTop:'15px'}}>
           <MyCarousel />
         </Container>

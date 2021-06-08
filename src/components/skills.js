@@ -36,6 +36,11 @@ const values = [
     active: {transition: '3s', background: '#4DB33D', width: '50%' }
   },
   {
+    text: "Flask",
+    before: {width: '0%', background: '#b19cd9'},
+    active: {transition: '3s', background: '#b19cd9', width: '65%' }
+  },
+  {
     text: "C++",
     before: {width: '0%', background: '#f34b7d'},
     active: {transition: '3s', background: '#f34b7d', width: '75%' }
