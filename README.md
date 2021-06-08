@@ -1,4 +1,4 @@
-# https://nathen-smith.github.io/personal-site/
+# https://nathensmith.com/
 Running locally:
 ```npm install``` then ```npm start```
 
