@@ -2,4 +2,4 @@
 Running locally:
 ```npm install``` then ```npm start```
 
-Styling and animations are credited to @cujarrett https://mattjarrett.dev
+Styling and animations are credited to @cujarrett
