@@ -28,7 +28,8 @@ function Layout(props) {
   const [visibleNav, setVisibleNav] = useState(true);
   return (  
     <div>
-      <Navbar collapseOnSelect bg={(visibleNav && type==='lg') ? "dark" : "light"} expand="md" sticky="top" variant={(visibleNav && type==='lg')? "dark" : "light"} style={{transition:'0.5s linear'}}>
+      {type==="lg" &&
+      <Navbar collapseOnSelect bg={visibleNav ? "dark" : "light"} expand="md" sticky="top" variant={visibleNav ? "dark" : "light"} style={{transition:'0.5s linear'}}>
         <a className="navbar-brand nathen" href="#top">
           Nathen Smith
         </a>
@@ -46,11 +47,11 @@ function Layout(props) {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar>}
         
       <div className="top" style={{height:height}}>
       <Container className="container-intro">
-        <InView as="div" id="intro" onChange={setVisibleNav}>
+        <InView as="div" id="intro" onChange={type==="lg"&&setVisibleNav}>
           <h1>Hi.</h1>
         </InView>
         <h2>I'm Nathen Smith.</h2>
