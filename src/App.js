@@ -48,23 +48,21 @@ function Layout(props) {
           </Nav>
         </Navbar.Collapse>
       </Navbar>}
-        
-      <div className="top" style={{height:height}}>
-      <Container className="container-intro">
-        <InView as="div" id="intro" onChange={type==="lg"&&setVisibleNav}>
+
+      <InView as="div" className="top" id="intro" onChange={type==="lg"&&setVisibleNav} style={{height:height}}>
+        <Container className="container-intro">
           <h1>Hi.</h1>
-        </InView>
-        <h2>I'm Nathen Smith.</h2>
-        <br />
-        <p className='light'>Computer Engineering at the University of Illinois at Urbana-Champaign.</p>
-        <p className='light'>Full Stack Developer.</p>
-        <p className='light'>React.js and Python Enthusiast.</p>
-        <p className='light'>Aspiring Designer.</p>
-        <p className='light'>Badminton player.</p>
-        <br />
-        <a href="#about" className="btn btn-light btn-sm"><span style={{fontWeight:600}}>MORE ABOUT ME</span></a>
+          <h2>I'm Nathen Smith.</h2>
+          <br />
+          <p className='light'>Computer Engineering at the University of Illinois at Urbana-Champaign.</p>
+          <p className='light'>Full Stack Developer.</p>
+          <p className='light'>React.js and Python Enthusiast.</p>
+          <p className='light'>Aspiring Designer.</p>
+          <p className='light'>Badminton player.</p>
+          <br />
+          <a href="#about" className="btn btn-light btn-sm"><span style={{fontWeight:600}}>MORE ABOUT ME</span></a>
         </Container>
-      </div>
+      </InView>
       
       <div id="about" style={{height:'56px'}}></div>
       <h2 className='title'>about me</h2>
