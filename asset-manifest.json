@@ -1,33 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.e2b720e3.chunk.css",
-    "main.js": "/static/js/main.d37330b6.chunk.js",
-    "main.js.map": "/static/js/main.d37330b6.chunk.js.map",
+    "main.css": "/static/css/main.27cbd4b5.chunk.css",
+    "main.js": "/static/js/main.7a8d88f3.chunk.js",
+    "main.js.map": "/static/js/main.7a8d88f3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.3d2a3f8d.js",
     "runtime-main.js.map": "/static/js/runtime-main.3d2a3f8d.js.map",
-    "static/js/2.e00e8d46.chunk.js": "/static/js/2.e00e8d46.chunk.js",
-    "static/js/2.e00e8d46.chunk.js.map": "/static/js/2.e00e8d46.chunk.js.map",
+    "static/js/2.5cff6c4e.chunk.js": "/static/js/2.5cff6c4e.chunk.js",
+    "static/js/2.5cff6c4e.chunk.js.map": "/static/js/2.5cff6c4e.chunk.js.map",
     "static/js/3.bfd958e8.chunk.js": "/static/js/3.bfd958e8.chunk.js",
     "static/js/3.bfd958e8.chunk.js.map": "/static/js/3.bfd958e8.chunk.js.map",
     "index.html": "/index.html",
     "service-worker.js": "/service-worker.js",
     "service-worker.js.map": "/service-worker.js.map",
-    "static/css/main.e2b720e3.chunk.css.map": "/static/css/main.e2b720e3.chunk.css.map",
-    "static/js/2.e00e8d46.chunk.js.LICENSE.txt": "/static/js/2.e00e8d46.chunk.js.LICENSE.txt",
-    "static/media/1-login.9a52158d.jpg": "/static/media/1-login.9a52158d.jpg",
+    "static/css/main.27cbd4b5.chunk.css.map": "/static/css/main.27cbd4b5.chunk.css.map",
+    "static/js/2.5cff6c4e.chunk.js.LICENSE.txt": "/static/js/2.5cff6c4e.chunk.js.LICENSE.txt",
+    "static/media/1-login.48641447.jpg": "/static/media/1-login.48641447.jpg",
     "static/media/1_Intro.e76c8702.jpg": "/static/media/1_Intro.e76c8702.jpg",
-    "static/media/2-user.baac4307.jpg": "/static/media/2-user.baac4307.jpg",
+    "static/media/2-user.62e1ee9c.jpg": "/static/media/2-user.62e1ee9c.jpg",
     "static/media/2_data.8dbdbb2e.jpg": "/static/media/2_data.8dbdbb2e.jpg",
-    "static/media/3-skills.a603040d.jpg": "/static/media/3-skills.a603040d.jpg",
+    "static/media/3-skills.b6ff83c1.jpg": "/static/media/3-skills.b6ff83c1.jpg",
     "static/media/3_graph.ae451f6f.jpg": "/static/media/3_graph.ae451f6f.jpg",
-    "static/media/4-liked.c5934205.jpg": "/static/media/4-liked.c5934205.jpg",
+    "static/media/4-liked.78dc0e07.jpg": "/static/media/4-liked.78dc0e07.jpg",
     "static/media/4_dijkstra.fa73141d.jpg": "/static/media/4_dijkstra.fa73141d.jpg",
-    "static/media/5-likes.736b48d0.jpg": "/static/media/5-likes.736b48d0.jpg"
+    "static/media/5-likes.b1e5ce5b.jpg": "/static/media/5-likes.b1e5ce5b.jpg",
+    "static/media/background.5d2892ee.jpg": "/static/media/background.5d2892ee.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.3d2a3f8d.js",
-    "static/js/2.e00e8d46.chunk.js",
-    "static/css/main.e2b720e3.chunk.css",
-    "static/js/main.d37330b6.chunk.js"
+    "static/js/2.5cff6c4e.chunk.js",
+    "static/css/main.27cbd4b5.chunk.css",
+    "static/js/main.7a8d88f3.chunk.js"
   ]
 }
