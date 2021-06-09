@@ -8,7 +8,7 @@ import CS225_4 from './CS225Photos/4_dijkstra.jpg';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faCircle } from '@fortawesome/free-solid-svg-icons';
 import useScreenType from "../../shared-hooks/useScreenType";
 
 fontawesome.library.add(brands)
@@ -41,6 +41,7 @@ const Description = () => {
           <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/>
         </h4>
       </a>
+      <FontAwesomeIcon icon={faCircle} style={{color:'#f34b7d', marginLeft:'5px'}} />
       <hr />
       <p className="project-text">
         Integrated a Twitter dataset into a directed graph data structure by parsing related files
@@ -64,7 +65,7 @@ const CS225Carousel = () => {
   if (screenType === "3-cols" || screenType === "2-cols") {
     return (
       <div style={{display:'flex', flexDirection:'row', marginLeft:'15px', marginRight:'15px'}}>
-        <Container style={{display:'inline-block', width:'60%',marginTop:'15px'}}>
+        <Container style={{display:'inline-block', width:'70%',marginTop:'15px'}}>
           <MyCarousel />
         </Container>
         <Container>

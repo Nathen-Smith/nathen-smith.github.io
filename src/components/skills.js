@@ -21,7 +21,7 @@ const values = [
   },
   
   {
-    text: "React",
+    text: "React.js",
     before: {width: '0%', background: '#61DBFB'},
     active: {transition: '3s', background: '#61DBFB', width: '80%' }
   },

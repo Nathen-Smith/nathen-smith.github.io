@@ -9,8 +9,9 @@ import CS411_5 from './CS411Photos/5-likes.jpg';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faCircle } from '@fortawesome/free-solid-svg-icons';
 import useScreenType from "../../shared-hooks/useScreenType";
+import React from 'react';
 
 fontawesome.library.add(brands)
 
@@ -43,6 +44,9 @@ const Description = () => {
           <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/>
         </h4>
       </a>
+      <FontAwesomeIcon icon={faCircle} style={{color:'#61DBFB', marginLeft:'5px'}} />
+      <FontAwesomeIcon icon={faCircle} style={{color:'#b19cd9', marginLeft:'5px'}} />
+      <FontAwesomeIcon icon={faCircle} style={{color:'#00758F', marginLeft:'5px'}} />
       <hr />
       <p className="project-text">
         A student matching web app that allows users to customize their profile and set preferences 
@@ -67,7 +71,7 @@ const CS411Carousel = () => {
   if (screenType === "3-cols" || screenType === "2-cols") {
     return (
       <div style={{display:'flex', flexDirection:'row', marginLeft:'15px', marginRight:'15px'}}>
-        <Container style={{display:'inline-block', width:'60%',marginTop:'15px'}}>
+        <Container style={{display:'inline-block', width:'70%',marginTop:'15px'}}>
           <MyCarousel />
         </Container>
         <Container>
