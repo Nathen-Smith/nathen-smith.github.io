@@ -91,7 +91,7 @@ function Layout(props) {
               classes.map((item, i) => <li key={i}>{item}</li>)
             }
           </p>
-          <a href="https://drive.google.com/file/d/1fPxuV9Q4mVLP5TB0HwfCs-AQ0Ckda4Pa/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1WGZCLNz6v__rHfGD1laP4hCEDEv7mvyC/view?usp=sharing">
             <p className='document-link'>
               My Resume <FontAwesomeIcon icon={faFilePdf} style={{marginLeft:'3px'}} />
             </p>
