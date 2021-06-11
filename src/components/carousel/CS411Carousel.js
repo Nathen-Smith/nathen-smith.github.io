@@ -58,6 +58,10 @@ const Description = () => {
         designed the entire filtering algorithm, designed and debugged frontend backend connecting with JSONs
         returned from complex SQL queries, ensured a smooth and intuitive UI/UX,
         and accounted for edge cases in user operations.
+        <br /><br />
+        I learned how to debug full stack projects, ways to implement responsiveness to ensure the best user experiences, 
+        how to write meaningful and complex backend operations, and, most importantly, that I want my career to head in 
+        this direction.
       </p>
       
     </div>

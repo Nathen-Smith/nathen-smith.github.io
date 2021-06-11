@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -108,6 +107,7 @@ function Layout(props) {
           <h2 className='title'>work I'm proud of</h2>
           <hr className='title' />        
           <CS411Carousel />
+          <br />
           <CS225Carousel />
           <br />
           <div style=
@@ -136,23 +136,17 @@ function Layout(props) {
   );
 }
 
-const App = () => {
+export const App = () => {
   const screenType = useScreenType();
   window.history.replaceState(null, null, ' '); // https://stackoverflow.com/a/49373716/15128146
 
   if (screenType === "3-cols" || screenType === "2-cols") {
     return (
-      <Router>
-        <Layout type='lg'/>
-      </Router>
+      <Layout type='lg'/>
     );
   }
 
   return (
-    <Router>
-      <Layout type='sm' />
-    </Router>
+    <Layout type='sm' />
   );
 }
-
-export default App;
