@@ -122,7 +122,7 @@ function Layout(props) {
         </div>
       </div>
       
-      <div style={{backgroundImage: `url(${BackgroundImg})`}}>
+      <div style={{backgroundImage: `url(${BackgroundImg})`, backgroundRepeat:'no-repeat'}}>
         <div id="contact" style={{height:'56px'}}></div>
           <h2 className='title'>get in touch!</h2>
           <hr className="title" />
