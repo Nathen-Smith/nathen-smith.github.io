@@ -1,6 +1,6 @@
 const values = [
   {
-    text: "JavaScript",
+    text: "JavaScript & Node",
     before: {width: '0%', background: '#F0DB4F'},
     active: {transition: '3.2s', background: '#F0DB4F', width: '75%' }
   },
