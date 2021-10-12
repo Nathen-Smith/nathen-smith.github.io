@@ -12249,7 +12249,7 @@ workbox-range-requests@^6.1.5:
   dependencies:
     workbox-core "6.3.0"
 
-workbox-routing@6.3.0:
+workbox-routing@6.3.0, workbox-routing@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/workbox-routing/-/workbox-routing-6.3.0.tgz#d21d39883baf66594fd8365af5c72aff44fc98b5"
   integrity sha512-asajX5UPkaoU4PB9pEpxKWKkcpA+KJQUEeYU6NlK0rXTCpdWQ6iieMRDoBTZBjTzUdL3j3s1Zo2qCOSvtXSYGg==
