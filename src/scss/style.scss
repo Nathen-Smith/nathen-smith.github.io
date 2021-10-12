@@ -1,5 +1,8 @@
 @import "mixins";
 
+body {
+  zoom: 100%;
+}
 h1,
 h2,
 h3,
@@ -21,6 +24,7 @@ a {
 }
 
 .skill-bar-percent {
+  @include sans-serif-font;
   position:absolute;
   right:10px;
   top:0;
@@ -30,7 +34,7 @@ a {
   color:rgba(255, 255, 255, .9);
   visibility: hidden;
   // background);
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  // font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   // @include sans-serif-font;
 
 }
@@ -227,4 +231,27 @@ div.top {
 
 .container-intro {
   margin-left: 0;
+}
+
+video {
+  @include centered-block;
+  height: auto;
+  width: 100%;
+}
+
+// .firebase-logo {
+//   margin-left: 5px;
+//   // width: 20px;
+//   height: 28px
+// }
+
+div.project-header {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  svg, img {
+    margin-left: 5px;
+    height: 28px;
+    width: auto;
+  }
 }
