@@ -2,17 +2,27 @@ const values = [
   {
     text: "JavaScript & Node",
     before: {width: '0%', background: '#F0DB4F'},
-    active: {transition: '3.2s', background: '#F0DB4F', width: '75%' }
+    active: {transition: '3.2s', background: '#F0DB4F', width: '85%' }
+  },
+  {
+    text: "HTML",
+    before: { width: '0%', background: '#e34c26' },
+    active: {transition: '3.2s', background: '#e34c26', width: '70%'}
+  },
+  {
+    text: "Sass & CSS",
+    before: { width: '0%', background: '#CD6799' },
+    active: {transition: '3.2s', background: '#CD6799', width: '65%'}
+  },
+  {
+    text: "TypeScript",
+    before: {width: '0%', background: '	#007acc'},
+    active: {transition: '3.2s', background: '	#007acc', width: '80%' }
   },
   {
     text: "Python",
     before: {width: '0%', background: '#ff9800'},
-    active: {transition: '3.2s', background: '#ff9800', width: '70%' }
-  },
-  {
-    text: "Linux",
-    before: {width: '0%', background: '#A1A1A4'},
-    active: {transition: '3.2s', background: '#A1A1A4', width: '55%' }
+    active: {transition: '3.2s', background: '#ff9800', width: '90%' }
   },
   {
     text: "Go",
@@ -23,7 +33,7 @@ const values = [
   {
     text: "React.js",
     before: {width: '0%', background: '#61DBFB'},
-    active: {transition: '3.2s', background: '#61DBFB', width: '80%' }
+    active: {transition: '3.2s', background: '#61DBFB', width: '85%' }
   },
   {
     text: "SQL",
@@ -33,7 +43,7 @@ const values = [
   {
     text: "NOSQL",
     before: {width: '0%', background: '#4DB33D'},
-    active: {transition: '3.2s', background: '#4DB33D', width: '50%' }
+    active: {transition: '3.2s', background: '#4DB33D', width: '80%' }
   },
   {
     text: "Flask",
@@ -48,7 +58,7 @@ const values = [
   {
     text: "Github",
     before: {width: '0%', background: '#e24329'},
-    active: {transition: '3.2s', background: '#e24329', width: '80%' }
+    active: {transition: '3.2s', background: '#e24329', width: '90%' }
   },
 ];
 

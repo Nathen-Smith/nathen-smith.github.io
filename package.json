@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/fontawesome-free-brands": "^5.0.13",
@@ -45,9 +46,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -64,8 +64,11 @@
   },
   "devDependencies": {
     "@types/react-responsive": "^8.0.4",
+    "autoprefixer": "^9",
     "css-what": "^5.0.1",
     "normalize-url": "^6.0.1",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "trim-newlines": "^4.0.2"
   },
   "resolutions": {

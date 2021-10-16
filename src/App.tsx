@@ -17,15 +17,14 @@ import BackgroundImg from './photos/background.jpg';
 import fontawesome from '@fortawesome/fontawesome';
 import brands from '@fortawesome/fontawesome-free-brands';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import './scss/style.scss';
 import { Databoard } from './components/projects/Databoard';
 
 fontawesome.library.add(brands)
 
-const classes = ['Data Structures', 'Intro to Algorithms and Models of Computation', 'Database Systems', 'Computer Systems Engineering',
-  'Distributed Systems', 'Autonomous Systems', 'System Programming', 'Discrete Structures']
+const classes = ['Data Structures', 'Algorithms and Models of Computation', 'Database Systems', 'The Art of Web Programming', 'Computer Systems Engineering',
+  'Programming Methods for Deep Learning', 'Distributed Systems', 'Autonomous Systems', 'Digital Systems Laboratory', 'System Programming', 'Discrete Structures']
 
 interface layoutProps {
   type: string;
@@ -80,38 +79,35 @@ const Layout: React.FC<layoutProps> = ({ type }) => {
       <h2 className='title'>about me</h2>
       <hr className="title" />
       <div className="intro" style={type === 'lg' ? { display: 'flex', flexDirection: 'row' } : { display: 'flex', flexDirection: 'column' }}>
-        <Container>
-          <h2>Background</h2>
-          <br />
-          <p className="background-text">
+        <div className="container">
+          <p className="text-white mx-1">Background </p>
+          <p className="background-text mx-1">
             I am a Senior studying Computer Engineering at the University of Illinois at Urbana-Champaign. Detail-oriented software developer
             where I enjoy clean code and breaking applications then fixing it in order to ensure responsive and intuitive user experiences
             (play around with this website and try changing the window size or viewing on a mobile device!). I am looking for an internship
             in order to enhance my skills in full stack development and user experience.
           </p>
-          <h2>Relevant Coursework</h2>
-          <br />
-          <p className="background-text">
-            {type === 'sm' && classes.join(', ')}
-            {type === 'lg' &&
-              classes.map((item, i) => <li key={i}>{item}</li>)
-            }
-          </p>
-          <a href="
-          https://drive.google.com/file/d/1ZLnVmHeXbyUdpZL1INsKBGMU1tTH1j93/view?usp=sharing
-          ">
-            <p className='document-link'>
-              My Resume <FontAwesomeIcon icon={faFilePdf} style={{ marginLeft: '3px' }} />
-            </p>
-          </a>
-        </Container>
-        <Container>
+          <p className="text-white mx-1">Relevant Coursework</p>
+          <div >
+            {classes.map((item, idx) => {
+              return (
+                <label className="flex inline-flex items-center" key={idx}>
+                  <div className="mx-1 bg-transparent py-2 px-4 border-2 border-gray-600 rounded" >
+                    <span className="text-gray-300 font-semibold">{item}</span>
+                  </div>
+
+                </label>
+            );
+            })}
+          </div>
+        </div>
+        <div className="container">
           <ShowSkills />
-        </Container>
+        </div>
       </div>
 
-      <div style={{ backgroundColor: 'black' }}>
-        <div className="curved">
+      <div className="bg-black">
+        <div className="block w-full bg-curved-container m-0 rounded-tl-6xl rounded-tr-6xl">
           <div id="portfolio" style={{ height: '56px' }}></div>
           <h2 className='title'>work I'm proud of</h2>
           <hr className='title' />
