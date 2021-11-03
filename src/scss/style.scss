@@ -10,7 +10,7 @@ h4,
 h5,
 h6 {
   @include github-md-font;
-  color: rgba(255, 255, 255, .9);
+  color: rgba(255, 255, 255, 0.9);
   margin-top: 0%;
   margin-bottom: 0%;
 }
@@ -20,32 +20,31 @@ h1 {
 }
 
 a {
-  color: #FFF;
+  color: #fff;
 }
 
 .skill-bar-percent {
   @include sans-serif-font;
-  position:absolute;
-  right:10px;
-  top:0;
-  font-size:12px;
-  height:35px;
-  line-height:35px;
-  color:rgba(255, 255, 255, .9);
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 12px;
+  height: 35px;
+  line-height: 35px;
+  color: rgba(255, 255, 255, 0.9);
   visibility: hidden;
   // background);
   // font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   // @include sans-serif-font;
-
 }
 
 .skillbar-title {
-  position:absolute;
-  top:0;
-  left:0;
-  width:10px;
-  font-size:14px;
-  font-weight:bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  font-size: 14px;
+  font-weight: bold;
   // color:#ffffff;
   // border-top-left-radius:3px;
   // border-bottom-left-radius:3px;
@@ -54,24 +53,24 @@ a {
 }
 
 .skillbar-title span {
-  display:block;
+  display: block;
   width: 200px;
-  padding:0 10px;
-  height:35px;
-  line-height:35px;
-  border-top-left-radius:3px;
-  border-bottom-left-radius:3px;
+  padding: 0 10px;
+  height: 35px;
+  line-height: 35px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
   // color:rgba(0, 0, 0, 1);
 }
 
 .skillbar {
-  position:relative;
-  display:block;
+  position: relative;
+  display: block;
   width: 100%;
-  margin-bottom:15px;
-  background:rgba(255, 255, 255, .9);
-  height:35px;
-  border-radius:6px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  height: 35px;
+  border-radius: 6px;
 }
 
 // $navbar-padding-y: 20px;
@@ -81,15 +80,15 @@ a {
 // }
 
 .navfragment {
-  color: rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
   display: block;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   background-color: transparent;
 }
 
 .nathen {
-  color: #6c757d!important;
+  color: #6c757d !important;
   font-weight: 700;
 }
 
@@ -99,7 +98,7 @@ a {
 // }
 
 .navlink {
-  color:rgba(0,0,0,.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .navlink:hover {
@@ -130,25 +129,26 @@ div.dark {
 }
 
 .project-link {
-  color:white;
+  color: white;
   opacity: 0.6;
   text-decoration: none;
   display: inline-block;
 }
 
 .project-link:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 hr {
   color: white;
   margin-top: 8px;
   margin-bottom: 8px;
-  border-top-color: rgba(255, 255, 255, .4);
+  border-top-color: rgba(255, 255, 255, 0.4);
 }
 
-.project-text, .background-text {
-  color: rgba(255, 255, 255, .6);
+.project-text,
+.background-text {
+  color: rgba(255, 255, 255, 0.6);
   font-size: large;
 }
 
@@ -158,23 +158,23 @@ hr {
 }
 
 .project-title:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 
 .document-link {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, 0.8);
   display: inline-block;
   text-decoration-color: rgba($color: white, $alpha: 0.6);
   // text-decoration: rgba(255, 255, 255, .9);
 }
 
 .document-link:hover {
-  color: rgba(255, 255, 255, 1.0);
-  text-decoration-color: rgba($color: white, $alpha: 1.0);
+  color: rgba(255, 255, 255, 1);
+  text-decoration-color: rgba($color: white, $alpha: 1);
 }
 
 p.light {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 5px;
   font-weight: 200;
   font-size: large;
@@ -185,14 +185,19 @@ html {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .intro {
-  background: rgb(41,44,51);
-  background: linear-gradient(180deg, rgba(41,44,51,1) 0%, rgba(21,22,26,1) 70%, rgba(0,0,0,1) 100%);
+  background: rgb(41, 44, 51);
+  background: linear-gradient(
+    180deg,
+    rgba(41, 44, 51, 1) 0%,
+    rgba(21, 22, 26, 1) 70%,
+    rgba(0, 0, 0, 1) 100%
+  );
   // the gradient should be long with the center point about 3/10 towards the darker side of the gradient
 }
 
@@ -221,16 +226,17 @@ hr.title {
   margin-bottom: 50px;
   border: none;
   height: 4px;
-  background-color: rgba(255, 255, 255, .9)
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 div.top {
-  background: rgb(52,58,64);
-  background: linear-gradient(180deg, rgba(52,58,64,1) 0%, rgba(47,51,58,1) 70%, rgba(41,44,51,1) 100%);
-}
-
-.container-intro {
-  margin-left: 0;
+  background: rgb(52, 58, 64);
+  background: linear-gradient(
+    180deg,
+    rgba(52, 58, 64, 1) 0%,
+    rgba(47, 51, 58, 1) 70%,
+    rgba(41, 44, 51, 1) 100%
+  );
 }
 
 video {
@@ -249,7 +255,8 @@ div.project-header {
   display: flex;
   align-items: center;
   height: 28px;
-  svg, img {
+  svg,
+  img {
     margin-left: 5px;
     height: 28px;
     width: auto;

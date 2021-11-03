@@ -1,8 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 
 const useScreenType = () => {
-  const is3Cols = useMediaQuery({ minWidth: 1440 });
-  const is2Cols = useMediaQuery({ minWidth: 1265 });
+  const is3Cols = useMediaQuery({ minWidth: 1536 });
+  const is2Cols = useMediaQuery({ minWidth: 1280 });
   const is1Cols = useMediaQuery({ minWidth: 800 });
 
   if (is3Cols) {
@@ -15,6 +15,6 @@ const useScreenType = () => {
     return "1-cols";
   }
   return "mobile";
-}
+};
 
 export default useScreenType;
