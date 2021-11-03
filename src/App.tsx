@@ -76,7 +76,7 @@ const Layout: React.FC<layoutProps> = ({ type }) => {
         <div>placeholder </div>
       )}
       <div className="container" ref={ref} style={{ height }}>
-        <div className="grid grid-cols-2">
+        <div className={type === "lg" ? "grid grid-cols-2" : "grid"}>
           <div>
             <p className="text-white text-9xl">Hi.</p>
             <p className="text-white text-3xl">I'm Nathen Smith.</p>
@@ -124,7 +124,7 @@ const Layout: React.FC<layoutProps> = ({ type }) => {
               user experiences.
             </p>
             <p className="text-white mx-1 mb-2 text-2xl">Relevant Coursework</p>
-            <Classes />
+            <Classes type={type} />
           </div>
 
           <div className="container">
@@ -133,7 +133,7 @@ const Layout: React.FC<layoutProps> = ({ type }) => {
         </div>
         <div className="container">
           <p className="text-white mb-2 mx-1 text-2xl">Work Experience</p>
-          <Experience />
+          <Experience type={type} />
         </div>
       </div>
 

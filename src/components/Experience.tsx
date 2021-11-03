@@ -21,16 +21,29 @@ const data = [
   },
 ];
 
-export const Experience = () => {
+interface screenType {
+  type: string;
+}
+
+export const Experience: React.FC<screenType> = ({ type }) => {
   return (
     <div className="pb-10">
       {data.map(({ title, date, description }) => {
+        if (type === "lg") {
+          return (
+            <div className="flow-root pb-2 mx-1">
+              <p className="float-left text-gray-200 text-xl">{title}</p>
+              <p className="float-right text-gray-300 text-xl">{date}</p>
+              <br />
+              <p className="float-right text-gray-400 text-lg">{description}</p>
+            </div>
+          );
+        }
         return (
           <div className="flow-root pb-2 mx-1">
-            <p className="float-left text-gray-200 text-xl">{title}</p>
-            <p className="float-right text-gray-300 text-xl">{date}</p>
-            <br />
-            <p className="float-right text-gray-400 text-lg">{description}</p>
+            <p className="text-gray-200 text-lg">{title}</p>
+            <p className=" text-gray-300 text-lg">{date}</p>
+            <p className="float-right text-gray-400">{description}</p>
           </div>
         );
       })}
