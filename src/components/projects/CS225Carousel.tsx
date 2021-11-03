@@ -42,20 +42,23 @@ const MyCarousel = () => {
 const Description = () => {
   return (
     <div>
-      <a
-        href="https://github.com/Nathen-Smith/Influence-of-Twitter-Users"
-        className="project-link"
-        style={{ textDecoration: "none" }}
-      >
-        <h4 className="project-title text-xl">
-          Influence of Twitter Users
-          {/* <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/> */}
-        </h4>
-      </a>
-      <FontAwesomeIcon
-        icon={faCircle}
-        style={{ color: "#f34b7d", marginLeft: "5px" }}
-      />
+      <div className="project-header">
+        <a
+          href="https://github.com/Nathen-Smith/Influence-of-Twitter-Users"
+          className="project-link"
+          style={{ textDecoration: "none" }}
+        >
+          <h4 className="project-title text-xl font-semibold">
+            Influence of Twitter Users
+            {/* <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/> */}
+          </h4>
+        </a>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+          alt="cpp"
+          style={{ marginRight: "-8px" }}
+        />
+      </div>
       <hr />
       <p className="project-text">
         Integrated a Twitter dataset into a directed graph data structure by

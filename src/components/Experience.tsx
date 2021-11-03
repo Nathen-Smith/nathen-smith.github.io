@@ -31,7 +31,7 @@ export const Experience: React.FC<screenType> = ({ type }) => {
       {data.map(({ title, date, description }) => {
         if (type === "lg") {
           return (
-            <div className="flow-root pb-2 mx-1">
+            <div className="flow-root pb-2 mx-1" key={title}>
               <p className="float-left text-gray-200 text-xl">{title}</p>
               <p className="float-right text-gray-300 text-xl">{date}</p>
               <br />
@@ -40,7 +40,7 @@ export const Experience: React.FC<screenType> = ({ type }) => {
           );
         }
         return (
-          <div className="flow-root pb-2 mx-1">
+          <div className="flow-root pb-2 mx-1" key={title}>
             <p className="text-gray-200 text-lg">{title}</p>
             <p className=" text-gray-300 text-lg">{date}</p>
             <p className="float-right text-gray-400">{description}</p>

@@ -16,7 +16,7 @@ const ECE391 = () => {
         className="project-link"
         style={{ textDecoration: "none" }}
       >
-        <h4 className="project-title text-xl">
+        <h4 className="project-title text-xl font-semibold">
           Unix-like Operating System
           {/* <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/> */}
         </h4>

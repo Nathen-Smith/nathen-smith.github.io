@@ -18,13 +18,13 @@ const Description = () => {
   return (
     <div>
       {/* <a style={{display: "table-cell"}} href="someLink" target="_blank">text</a> */}
-      <div className="project-header text-xl">
+      <div className="project-header">
         <a
           href="https://github.com/Nathen-Smith/data-dashboard"
           className="project-link"
           style={{ textDecoration: "none" }}
         >
-          <h4 className="project-title">
+          <h4 className="project-title text-xl font-semibold">
             Realtime Data Dashboard
             {/* <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{ marginLeft: '5px', marginBottom: '5px', opacity: '0.6' }} /> */}
           </h4>
@@ -49,15 +49,16 @@ const Description = () => {
       </div>
       <hr />
       <p className="project-text">
-        The system was implemented using React and TypeScript with package
-        react-firebase-hooks for ease of integrating Firestore snapshot, and
-        supporting re-rendering when there are changes in the snapshot.As for
-        the database, I chose Python to easily parse movies_metadata.csv as
-        strings line by line and obtain the right types through the eval()
-        function, which correctly extracts Booleans, Arrays, Dictionaries,
-        etc.After obtaining the right data and its types, a dictionary is
-        created through dict(zip(keys, values)) and is added as a single movie
-        document in the movies collection through admin SDK functionality.
+        A scalable full stack web application that monitors changes in a movies
+        database in real time by using Firebase’s long polling method
+        onSnapshot. The stack is React, TypeScript, Firebase, Python.
+      </p>
+      <br />
+      <p className="project-text">
+        I Achieved fast re-rendering by designing high performance algorithms to
+        compute and display statistics of the monitored selection of the
+        database, documented design, implementation, usage, scalability,
+        deployment, and bottlenecks
       </p>
     </div>
   );

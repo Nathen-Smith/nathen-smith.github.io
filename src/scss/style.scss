@@ -262,3 +262,7 @@ div.project-header {
     width: auto;
   }
 }
+
+.filter-white {
+  filter: brightness(0) saturate(100%);
+}

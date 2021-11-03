@@ -45,17 +45,41 @@ const MyCarousel = () => {
 const Description = () => {
   return (
     <div>
-      <a
-        href="https://github.com/Nathen-Smith/HippoCampus"
-        className="project-link"
-        style={{ textDecoration: "none" }}
-      >
-        <h4 className="project-title text-xl">
-          HippoCampus
-          {/* <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/> */}
-        </h4>
-      </a>
-      <FontAwesomeIcon
+      <div className="project-header">
+        <a
+          href="https://github.com/Nathen-Smith/HippoCampus"
+          className="project-link"
+          style={{ textDecoration: "none" }}
+        >
+          <h4 className="project-title text-xl font-semibold">
+            HippoCampus
+            {/* <FontAwesomeIcon icon={faExternalLinkAlt} size="xs" style={{marginLeft:'5px', marginBottom:'5px',opacity:'0.6'}}/> */}
+          </h4>
+        </a>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          alt="react"
+          style={{ marginRight: "-8px" }}
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+          alt="js"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg"
+          alt="flask"
+          className="fill-current text-white"
+        />
+        <img
+          src="https://www.vectorlogo.zone/logos/mysql/mysql-official.svg"
+          alt="mysql"
+        />
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+          alt="python"
+        />
+
+        {/* <FontAwesomeIcon
         icon={faCircle}
         style={{ color: "#61DBFB", marginLeft: "5px" }}
       />
@@ -66,7 +90,8 @@ const Description = () => {
       <FontAwesomeIcon
         icon={faCircle}
         style={{ color: "#00758F", marginLeft: "5px" }}
-      />
+      /> */}
+      </div>
       <hr />
       <p className="project-text">
         A student matching web app that allows users to customize their profile
