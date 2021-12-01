@@ -41,7 +41,8 @@ const Layout: React.FC<layoutProps> = ({ type }) => {
   }
   return (
     <div>
-      {type === "lg" && (
+      {
+        /* {type === "lg" && ( */
         // <Navbar
         //   collapseOnSelect
         //   bg={inView ? "dark" : "light"}
@@ -73,33 +74,33 @@ const Layout: React.FC<layoutProps> = ({ type }) => {
         //     </Nav>
         //   </Navbar.Collapse>
         // </Navbar>
-        <div>placeholder </div>
-      )}
-      <div className="container" ref={ref} style={{ height }}>
-        <div className={type === "lg" ? "grid grid-cols-2" : "grid"}>
-          <div>
-            <p className="text-white text-9xl">Hi.</p>
-            <p className="text-white text-3xl">I'm Nathen Smith.</p>
-            <br />
-            <p className="light">Computer Engineer at UIUC</p>
-            <p className="light">Experienced Full Stack Developer</p>
-            <p className="light">React and Python Enthusiast</p>
-            <p className="light">Badminton Player</p>
-            <br />
-            {type === "sm" && (
-              <a href="#about" className="btn btn-light btn-sm">
-                <span style={{ fontWeight: 600 }}>MORE ABOUT ME</span>
-              </a>
-            )}
+        // )}
+        <div className="container" ref={ref} style={{ height }}>
+          <div className={type === "lg" ? "grid grid-cols-2" : "grid"}>
+            <div>
+              <p className="text-white text-9xl">Hi.</p>
+              <p className="text-white text-3xl">I'm Nathen Smith.</p>
+              <br />
+              <p className="light">Computer Engineer at UIUC</p>
+              <p className="light">Experienced Full Stack Developer</p>
+              <p className="light">React and Python Enthusiast</p>
+              <p className="light">Badminton Player</p>
+              <br />
+              {type === "sm" && (
+                <a href="#about" className="btn btn-light btn-sm">
+                  <span style={{ fontWeight: 600 }}>MORE ABOUT ME</span>
+                </a>
+              )}
+            </div>
+            <img
+              src="/assets/me.jpg"
+              alt="portrait"
+              className="rounded-full w-2/3"
+              style={type === "sm" ? { display: "none" } : {}}
+            />
           </div>
-          <img
-            src="/assets/me.jpg"
-            alt="portrait"
-            className="rounded-full w-2/3"
-            style={type === "sm" ? { display: "none" } : {}}
-          />
         </div>
-      </div>
+      }
       {/* </InView> */}
 
       <div id="about" style={{ height: "56px" }}></div>
