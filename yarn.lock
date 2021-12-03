@@ -6125,10 +6125,10 @@ icss-utils@^4.0.0, icss-utils@^4.1.1:
   dependencies:
     postcss "^7.0.14"
 
-idb@^6.0.0:
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/idb/-/idb-6.1.4.tgz#ec77519fe2591be616eaf3bbdedc3662bb558a99"
-  integrity sha512-DshI5yxIB3NYc47cPpfipYX8MSIgQPqVR+WoaGI9EDq6cnLGgGYR1fp6z8/Bq9vMS8Jq1bS3eWUgXpFO5+ypSA==
+idb@^6.0.0, idb@^6.1.4:
+  version "6.1.5"
+  resolved "https://registry.yarnpkg.com/idb/-/idb-6.1.5.tgz#dbc53e7adf1ac7c59f9b2bf56e00b4ea4fce8c7b"
+  integrity sha512-IJtugpKkiVXQn5Y+LteyBCNk1N8xpGV3wWZk9EVtZWH8DYkjBn0bX1XnGP9RkyZF0sAcywa6unHqSWKe7q4LGw==
 
 identity-obj-proxy@3.0.0:
   version "3.0.0"
@@ -12282,6 +12282,11 @@ workbox-core@6.3.0:
   resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-6.3.0.tgz#a7d82bae6f623f342e04028a0a2cef39af71af55"
   integrity sha512-SufToEV3SOLwwz3j+P4pgkfpzLRUlR17sX3p/LrMHP/brYKvJQqjTwtSvaCkkAX0RPHX2TFHmN8xhPP1bpmomg==
 
+workbox-core@6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-6.4.2.tgz#f99fd36a211cc01dce90aa7d5f2c255e8fe9d6bc"
+  integrity sha512-1U6cdEYPcajRXiboSlpJx6U7TvhIKbxRRerfepAJu2hniKwJ3DHILjpU/zx3yvzSBCWcNJDoFalf7Vgd7ey/rw==
+
 workbox-core@^5.1.4:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-5.1.4.tgz#8bbfb2362ecdff30e25d123c82c79ac65d9264f4"
@@ -12293,6 +12298,14 @@ workbox-expiration@^5.1.4:
   integrity sha512-oDO/5iC65h2Eq7jctAv858W2+CeRW5e0jZBMNRXpzp0ZPvuT6GblUiHnAsC5W5lANs1QS9atVOm4ifrBiYY7AQ==
   dependencies:
     workbox-core "^5.1.4"
+
+workbox-expiration@^6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/workbox-expiration/-/workbox-expiration-6.4.2.tgz#61613459fd6ddd1362730767618d444c6b9c9139"
+  integrity sha512-0hbpBj0tDnW+DZOUmwZqntB/8xrXOgO34i7s00Si/VlFJvvpRKg1leXdHHU8ykoSBd6+F2KDcMP3swoCi5guLw==
+  dependencies:
+    idb "^6.1.4"
+    workbox-core "6.4.2"
 
 workbox-google-analytics@^5.1.4:
   version "5.1.4"
