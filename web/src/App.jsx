@@ -164,7 +164,7 @@ const App = () => {
                 </div>
 
                 <div className="absolute inset-y-0 right-0 flex items-center justify-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <div className="ml-3 relative text-sm font-small flex flex-row justify-center items-center space-x-2 sm:space-x-4">
+                  <div className="ml-3 relative text-sm font-small flex flex-row justify-center items-center space-x-3 sm:space-x-4">
                     {navIconLinks
                       .filter((item) => isNotMobile || !item.mobileInvisible)
                       .map((item) => {
