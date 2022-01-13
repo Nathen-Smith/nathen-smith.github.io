@@ -349,6 +349,8 @@ export const projects = [
       { name: "TypeScript", color: "#007acc" },
       { name: "React", color: "#61DBFB" },
       { name: "React-Router", color: "rgb(233, 73, 73)" },
+      { name: "Mongoose", color: "#800" },
+      { name: "Axios", color: "#5a29e4" },
       { name: "MongoDB", color: "#3FA037" },
       { name: "Firebase", color: "#FFA000" },
       { name: "Docker", color: "#0db7ed" },
@@ -389,6 +391,7 @@ export const projects = [
       { name: "TypeScript", color: "#007acc" },
       { name: "React", color: "#61DBFB" },
       { name: "React-Router", color: "rgb(233, 73, 73)" },
+      { name: "Axios", color: "#5a29e4" },
     ],
   },
   {
