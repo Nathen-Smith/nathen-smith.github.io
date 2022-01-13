@@ -1,0 +1,52 @@
+{
+  "name": "react-tut",
+  "homepage": "https://nathen-smith.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-intersection-observer": "^8.33.1",
+    "react-responsive": "^9.0.0-beta.5",
+    "react-scripts": "5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.7"
+  }
+}

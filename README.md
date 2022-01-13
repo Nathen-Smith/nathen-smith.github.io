@@ -1,5 +1,3 @@
-# https://nathensmith.com/
-Running locally:
-```npm install``` then ```npm start```
+# personal website
 
-Styling and animations are credited to @cujarrett
+https://nathensmith.com/
