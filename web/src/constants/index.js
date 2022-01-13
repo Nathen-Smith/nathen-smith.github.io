@@ -39,7 +39,7 @@ export const mobileLeftItems = [
 export const Intro = () => {
   return (
     <div className="grid grid-cols-2 h-screen">
-      <div>
+      <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
         <div className="text-9xl text-black dark:text-white">Hi.</div>
         <div className="text-3xl text-black dark:text-white">
           I'm Nathen Smith.
@@ -54,16 +54,18 @@ export const Intro = () => {
         <br />
         <a
           href="#about"
-          className="btn dark:bg-white text-white dark:text-black bg-blue-500 px-3 py-2 rounded-md btn-sm sm:hidden font-bold text-sm"
+          className="btn dark:bg-white text-white dark:text-black bg-blue-500 px-3 py-2 rounded-md btn-sm font-bold text-sm self-start"
         >
           MORE ABOUT ME
         </a>
       </div>
-      <img
-        src="/assets/me.jpg"
-        alt="portrait"
-        className="rounded-full w-3/4 lg:w-1/2 mt-6"
-      />
+      <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
+        <img
+          src="/assets/me.jpg"
+          alt="portrait"
+          className="rounded-full w-4/5 sm:w-3/4 lg:w-2/3 mx-auto mt-6 sm:mt-0"
+        />
+      </div>
     </div>
   );
 };
