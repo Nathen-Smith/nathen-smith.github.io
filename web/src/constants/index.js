@@ -380,7 +380,7 @@ export const projects = [
   {
     src: "/assets/projects/marvelapp.jpeg",
     alt: "marvelapiapp",
-    name: "Marvel API APP",
+    name: "Marvel API App",
     description: "Frontend App using Marvel API",
     link: "https://nathensmith.com/marvel-api-app/",
     tech: [
