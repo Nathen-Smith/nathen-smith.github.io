@@ -13,33 +13,36 @@ const Projects = () => {
               sm:hover:scale-110 sm:transition-all ease-in-out hover:shadow-xl"
           >
             <img src={project.src} alt={project.alt} className="rounded-t-xl" />
-            <div className="flex flex-row font-semibold justify-center ">
-              <div>{project.name}</div>
-              <ExternalLinkIcon className="h-5 ml-1" />
-            </div>
-            <div className="text-gray-500 dark:text-gray-400">
-              {project.description}
-            </div>
-            <div className="space-x-2 space-y-2 mb-2">
-              {project.tech.map(({ name, color, textColor }) => (
-                <div
-                  key={name}
-                  className="border px-2 py-1 rounded text-sm inline-block"
-                  style={
-                    localStorage.theme === "dark" ||
-                    (!("theme" in localStorage) &&
-                      window.matchMedia("(prefers-color-scheme: dark)").matches)
-                      ? {
-                          color: textColor || "white",
-                          borderColor: color,
-                          backgroundColor: color,
-                        }
-                      : { borderColor: color, color }
-                  }
-                >
-                  {name}
-                </div>
-              ))}
+            <div className="mx-2 mb-2">
+              <div className="flex flex-row font-semibold justify-center space-x-1">
+                <div>{project.name}</div>
+                <ExternalLinkIcon className="h-5" />
+              </div>
+              <div className="text-gray-500 dark:text-gray-400">
+                {project.description}
+              </div>
+              <div className="space-x-2 space-y-2">
+                {project.tech.map(({ name, color, textColor }) => (
+                  <div
+                    key={name}
+                    className="flex inline-flex border px-3 py-1 rounded text-sm"
+                    style={
+                      localStorage.theme === "dark" ||
+                      (!("theme" in localStorage) &&
+                        window.matchMedia("(prefers-color-scheme: dark)")
+                          .matches)
+                        ? {
+                            color: textColor || "white",
+                            borderColor: color,
+                            backgroundColor: color,
+                          }
+                        : { borderColor: color, color }
+                    }
+                  >
+                    {name}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         ))}

@@ -337,6 +337,7 @@ export const skillIcons = [
   },
 ];
 
+// text by default is white
 export const projects = [
   {
     src: "/assets/projects/childdevtracker.jpeg",
@@ -349,8 +350,8 @@ export const projects = [
       { name: "TypeScript", color: "#007acc" },
       { name: "React", color: "#61DBFB" },
       { name: "React-Router", color: "rgb(233, 73, 73)" },
-      { name: "Mongoose", color: "#800" },
       { name: "Axios", color: "#5a29e4" },
+      { name: "Mongoose", color: "#800" },
       { name: "MongoDB", color: "#3FA037" },
       { name: "Firebase", color: "#FFA000" },
       { name: "Docker", color: "#0db7ed" },
@@ -382,10 +383,25 @@ export const projects = [
     ],
   },
   {
+    src: "/assets/projects/todoistapi.jpeg",
+    alt: "todoist",
+    name: "Todoist API",
+    description:
+      "Robust CRUD API with cascading updates on users and their tasks",
+    link: "https://github.com/Nathen-Smith/todoist-api",
+    tech: [
+      { name: "JavaScript", color: "#F0DB4F", textColor: "black" },
+      { name: "Express.js", color: "#353535" },
+      { name: "Mongoose", color: "#800" },
+      { name: "MongoDB", color: "#3FA037" },
+      { name: "Python", color: "#306998" },
+    ],
+  },
+  {
     src: "/assets/projects/marvelapp.jpeg",
     alt: "marvelapiapp",
     name: "Marvel API App",
-    description: "Frontend App using Marvel API",
+    description: "Frontend app using Marvel API",
     link: "https://nathensmith.com/marvel-api-app/",
     tech: [
       { name: "TypeScript", color: "#007acc" },
