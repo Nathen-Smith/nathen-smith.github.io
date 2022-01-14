@@ -77,8 +77,11 @@ export const About = () => {
       <div className="text-lg mb-2">
         I am a Senior studying Computer Engineering at the University of
         Illinois at Urbana-Champaign. Detail-oriented software developer where I
-        enjoy fostering a positive development environment, designing scalable
-        solutions and ensuring responsive, intuitive user experiences.
+        enjoy fostering a positive development environment, designing robust,
+        scalable solutions, and ensuring responsive, intuitive user experiences.
+        As a perfectionist, my favorite part of coding is the process of trying
+        to break a software system and fixing edge cases in order to ensure
+        safety and ease of use.
       </div>
     </div>
   );
