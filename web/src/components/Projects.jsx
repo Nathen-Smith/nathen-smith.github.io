@@ -1,9 +1,7 @@
 import { projects } from "../constants";
 import { ExternalLinkIcon } from "@heroicons/react/outline";
-import { useMediaQuery } from "react-responsive";
 
 const Projects = () => {
-  const isNotMobile = useMediaQuery({ query: "(min-width: 640px)" });
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -11,9 +9,8 @@ const Projects = () => {
           <div
             onClick={() => window.open(project.link, "_blank").focus()}
             key={project.src}
-            className={`cursor-pointer text-center shadow-md max-w-225px rounded-xl ${
-              isNotMobile && "hover:scale-110"
-            } `}
+            className="cursor-pointer text-center shadow-md max-w-225px rounded-xl
+              sm:hover:scale-110 sm:transition-all ease-in-out"
           >
             <img src={project.src} alt={project.alt} className="rounded-t-xl" />
             <div className="flex flex-row font-semibold justify-center ">
