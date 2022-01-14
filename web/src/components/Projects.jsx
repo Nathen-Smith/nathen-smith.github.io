@@ -10,7 +10,7 @@ const Projects = () => {
             onClick={() => window.open(project.link, "_blank").focus()}
             key={project.src}
             className="cursor-pointer text-center shadow-md max-w-225px rounded-xl
-              sm:hover:scale-110 sm:transition-all ease-in-out"
+              sm:hover:scale-110 sm:transition-all ease-in-out hover:shadow-xl"
           >
             <img src={project.src} alt={project.alt} className="rounded-t-xl" />
             <div className="flex flex-row font-semibold justify-center ">
