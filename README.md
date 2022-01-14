@@ -19,3 +19,8 @@ git remote add origin <GITHUB_USERNAME>.github.io.git
 4. Change CNAME if you have bought a domain, homepage in `package.json`
 
 5. Make modifications to `constants/index.js` (and `Layout.jsx` if needed)
+
+## Customization
+
+Q: How to change the position indicator color on web mode?
+A: Change classnames <a href="https://github.com/Nathen-Smith/nathen-smith.github.io/blob/46f2304c6e79b5074a0fa9df43fdb72aff933383/web/src/App.jsx#L142-L146">here</a>
