@@ -1,27 +1,23 @@
-# https://nathensmith.com/
+## Want to use this as a template?
 
-want to use this as a template?
+1. Install <a href="https://git-scm.com/">git</a>, <a href="https://nodejs.org/en/">Node.js</a>, and <a href="https://classic.yarnpkg.com/en/docs/install/#windows-stable">Yarn</a>. 
 
-1. Make an empty public repository of the name `<GITHUB_USERNAME>.github.io.git`. The username should be in lowercase.
-2.
+2. Make an empty public repository of the name `<GITHUB_USERNAME>.github.io.git`. The username should be in lowercase.
+3. Clone the repository: ```git clone https://github.com/Nathen-Smith/nathen-smith.github.io.git my-website```
+4. Change ```homepage``` field in ```web/package.json``` to match your github username.
 
-```
-git clone https://github.com/Nathen-Smith/nathen-smith.github.io.git
-```
-3. Change ```homepage``` field in ```web/package.json``` to match your github username.
+5. Change CNAME if you have bought a domain, homepage in `package.json`. Or remove it for now.
 
-4. Change CNAME if you have bought a domain, homepage in `package.json`. Or remove it for now.
-
-5.
+6. Push the repository to your own GitHub
 ```
 git remote rm origin
 git remote add origin <GITHUB_USERNAME>.github.io.git
 git branch -M main
 git push -u origin main
 ```
-6. Go to the Pages section in Settings of the repo, and set the source branch to ```gh-pages```.
+7. Go to the Pages section in Settings of the repo, and set the source branch to ```gh-pages```.
 
-7. Start making modifications to `constants/index.js` (and `Layout.jsx` if needed)
+8. Start making modifications to `constants/index.js` (and `Layout.jsx` if needed)
 
 ## Customization
 
