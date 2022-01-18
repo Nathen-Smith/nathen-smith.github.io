@@ -2,23 +2,26 @@
 
 want to use this as a template?
 
-1. Make an empty repository of the name `<GITHUB_USERNAME>.github.io.git`. The username should be in lowercase.
+1. Make an empty public repository of the name `<GITHUB_USERNAME>.github.io.git`. The username should be in lowercase.
 2.
 
 ```
 git clone https://github.com/Nathen-Smith/nathen-smith.github.io.git
 ```
+3. Change ```homepage``` field in ```web/package.json``` to match your github username.
 
-3.
+4. Change CNAME if you have bought a domain, homepage in `package.json`. Or remove it for now.
 
+5.
 ```
 git remote rm origin
 git remote add origin <GITHUB_USERNAME>.github.io.git
+git branch -M main
+git push -u origin main
 ```
+6. Go to the Pages section in Settings of the repo, and set the source branch to ```gh-pages```.
 
-4. Change CNAME if you have bought a domain, homepage in `package.json`
-
-5. Make modifications to `constants/index.js` (and `Layout.jsx` if needed)
+7. Start making modifications to `constants/index.js` (and `Layout.jsx` if needed)
 
 ## Customization
 
