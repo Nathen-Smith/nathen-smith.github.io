@@ -17,7 +17,16 @@ git push -u origin main
 ```
 7. Go to the Pages section in Settings of the repo, and set the source branch to ```gh-pages```.
 
-8. Start making modifications to `constants/index.js` (and `Layout.jsx` if needed)
+## Development
+
+1. Run the app locally
+```
+cd web/
+yarn
+yarn start
+```
+
+2. Start making modifications to `constants/index.js`
 
 ## Customization
 
