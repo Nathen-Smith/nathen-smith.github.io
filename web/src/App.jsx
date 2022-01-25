@@ -189,7 +189,7 @@ const App = () => {
                         );
                       })}
 
-                    <div className="flex items-center border text-gray-400 border-gray-400 rounded-md hover:bg-gray-400 dark:hover:bg-zinc-700 hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
+                    <div className="flex items-center border text-gray-400 border-gray-400 rounded-md sm:hover:bg-gray-200 sm:dark:hover:bg-zinc-700 sm:hover:text-gray-700 sm:dark:hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
                       {theme === "light" ? (
                         <SunIcon
                           onClick={() => dispatch("dark")}
@@ -202,8 +202,8 @@ const App = () => {
                         />
                       )}
                     </div>
-                    <div className="flex items-center sm:hidden border text-gray-400 border-gray-400 rounded-md hover:bg-gray-400 dark:hover:bg-zinc-700">
-                      <Disclosure.Button className="inline-flex items-center justify-center rounded-md hover:text-white focus:outline-none h-7">
+                    <div className="flex items-center sm:hidden border text-gray-400 border-gray-400 rounded-md">
+                      <Disclosure.Button className="inline-flex items-center justify-center rounded-md focus:outline-none h-7">
                         <span className="sr-only">Open main menu</span>
                         {open ? (
                           <XIcon className="block h-6 w-7" aria-hidden="true" />
@@ -228,7 +228,7 @@ const App = () => {
                     className={classNames(
                       item.active
                         ? "bg-gray-300 text-black dark:bg-zinc-600 dark:text-white py-1.5"
-                        : "text-gray-400 hover:bg-gray-200 hover:text-black dark:hover:bg-zinc-700 dark:hover:text-white",
+                        : "text-gray-400",
                       "px-3 py-2 rounded-md text-sm font-medium"
                     )}
                   >
