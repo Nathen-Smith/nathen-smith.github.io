@@ -89,9 +89,10 @@ export const About = () => {
 
 export const experience = [
   {
-    title: "Incoming Digital Systems Laboratory ECE 385 Course Assistant",
+    title: "Digital Systems Laboratory ECE 385 Course Assistant",
     date: "Jan 2022 - May 2022",
-    description: "",
+    description:
+      "Guided students through the design and implementation of computer architecture problems in SystemVerilog and C",
   },
   {
     title: "Software Development Engineer Intern @ Forward Data Lab",
@@ -110,6 +111,18 @@ export const experience = [
     date: "Jul 2021 - Sep 2021",
     description:
       "I implemented and designed user update functionality through frontend, database update, middleware, and Twilio Two-Factor Authentication APIs. The stack is React Native, Redux, Mongoose, Express.js. I am responsible for debugging API, frontend bugs, and assigning tasks to other inters. I maintained Jira issue tracking and documented build instructions for frontend backend connecting with mobile simulator.",
+  },
+  {
+    title: "Process Engineer Intern @ Altaflex",
+    date: "May 2019 - Aug 2019",
+    description:
+      "I documented machine guidelines and safety, tested electrical connections and cross-section measurements in flexible circuits, and contributed to gaining approval for the manufacturing of a flexible circuit for a $30 billion dollar medical company.",
+  },
+  {
+    title: "Coding Teacher @ Leigh Coding Club",
+    date: "Jan 2018 - June 2018",
+    description:
+      "Taught basic C++ I/O, conditions, and data structures to middle school students.",
   },
 ];
 
