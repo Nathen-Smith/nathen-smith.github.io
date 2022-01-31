@@ -98,7 +98,7 @@ export const experience = [
     title: "Software Development Engineer Intern @ Forward Data Lab",
     date: "Sep 2021 - May 2022",
     description:
-      "I reduced the latency of the slowest MySQL queries 5 times by using DB indexing, compiler and algorithmic simplification. I researched methods and am responsible for building an API for comparing institutions and faculty meaningfully, building on existing higher education API and Microsoft MAKES API. I containerized the Flask server with Docker and deployed MySQL server accessed through ssh tunnel. I debugged and added UI/UX and backend features including responsiveness and image styling.",
+      "I am responsible for database optimization and utilizing higher education API and Microsoft MAKES API to API for comparing institutions and faculty meaningfully reduced the latency of the slowest MySQL queries 5 times by using DB indexing, compiler and algorithmic simplification. I researched methods and am responsible for building an API for comparing institutions and faculty meaningfully, building on existing higher education API and Microsoft MAKES API. I containerized the Flask server with Docker and deployed MySQL server accessed through ssh tunnel. I debugged and added UI/UX and backend features including responsiveness and image styling.",
   },
   {
     title: "Database Systems CS 411 Course Assistant",
@@ -111,18 +111,6 @@ export const experience = [
     date: "Jul 2021 - Sep 2021",
     description:
       "I implemented and designed user update functionality through frontend, database update, middleware, and Twilio Two-Factor Authentication APIs. The stack is React Native, Redux, Mongoose, Express.js. I am responsible for debugging API, frontend bugs, and assigning tasks to other inters. I maintained Jira issue tracking and documented build instructions for frontend backend connecting with mobile simulator.",
-  },
-  {
-    title: "Process Engineer Intern @ Altaflex",
-    date: "May 2019 - Aug 2019",
-    description:
-      "I documented machine guidelines and safety, tested electrical connections and cross-section measurements in flexible circuits, and contributed to gaining approval for the manufacturing of a flexible circuit for a $30 billion dollar medical company.",
-  },
-  {
-    title: "Coding Teacher @ Leigh Coding Club",
-    date: "Jan 2018 - June 2018",
-    description:
-      "Taught basic C++ I/O, conditions, and data structures to middle school students.",
   },
 ];
 

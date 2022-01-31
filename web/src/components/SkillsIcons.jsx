@@ -20,7 +20,7 @@ const SkillsIcons = () => {
                 : {}
             }
           />
-          <div className="text-center text-sm font-medium mt-2">
+          <div className="text-center text-sm font-medium mt-2 text-gray-600 dark:text-gray-300">
             {icon.name}
           </div>
         </div>
