@@ -49,6 +49,7 @@ export const Intro = () => {
           <div>Computer Engineer at UIUC.</div>
           <div>Experienced Full Stack Developer.</div>
           <div>React, Python, and TypeScript Enthusiast.</div>
+          <div>Fish shell-er.</div>
           <div>Badminton Player.</div>
         </div>
         <br />
