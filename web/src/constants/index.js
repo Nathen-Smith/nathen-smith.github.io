@@ -99,7 +99,7 @@ export const experience = [
     title: "Software Development Engineer Intern @ Forward Data Lab",
     date: "Sep 2021 - May 2022",
     description:
-      "I am responsible for database optimization and utilizing higher education API and Microsoft MAKES API to API for comparing institutions and faculty meaningfully reduced the latency of the slowest MySQL queries 5 times by using DB indexing, compiler and algorithmic simplification. I researched methods and am responsible for building an API for comparing institutions and faculty meaningfully, building on existing higher education API and Microsoft MAKES API. I containerized the Flask server with Docker and deployed MySQL server accessed through ssh tunnel. I debugged and added UI/UX and backend features including responsiveness and image styling.",
+      "I am responsible for developing an API and frontend utilizing higher education and Microsoft MAKES APIs to meaningfully and efficiently compare institutions in addition to backend performance and frontend bugs. I reduced the latency of the slowest MySQL queries 5 times by using DB indexing, compiler and algorithmic simplification. In order to achieve environment replication, I containerized the Flask server with Docker and deployed MySQL server accessed through ssh tunnel. Lastly, I enhanced UI/UX and backend features including responsiveness and image styling through React, JavaScript, Flask, and Python.",
   },
   {
     title: "Database Systems CS 411 Course Assistant",
