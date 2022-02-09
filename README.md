@@ -32,3 +32,6 @@ yarn start
 
 Q: How to change the position indicator color on web mode?
 A: Change classnames <a href="https://github.com/Nathen-Smith/nathen-smith.github.io/blob/46f2304c6e79b5074a0fa9df43fdb72aff933383/web/src/App.jsx#L142-L146">here</a>
+
+Q: How to change column layout?
+A: Go to ```/Web/src/Layout.tsx```, make changes to the amount of grids, the divs with ids, etc.
