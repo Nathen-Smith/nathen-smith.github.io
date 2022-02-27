@@ -179,11 +179,15 @@ const App = () => {
                           <a
                             href={item.link}
                             key={item.link}
-                            className="flex justify-center items-center"
+                            className="flex justify-center items-center opacity-0.2"
                           >
                             <FontAwesomeIcon
                               icon={item.icon}
-                              style={{ height: "24px", width: "24px" }}
+                              style={{
+                                height: "24px",
+                                width: "24px",
+                              }}
+                              className="FontAwesome"
                             />
                           </a>
                         );

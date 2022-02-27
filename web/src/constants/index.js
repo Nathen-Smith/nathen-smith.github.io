@@ -411,6 +411,7 @@ export const projects = [
     tech: [
       { name: "TypeScript", color: "#007acc" },
       { name: "React", color: "#61DBFB" },
+      { name: "Next.js", color: "white", textColor: "black" },
       { name: "React-Router", color: "rgb(233, 73, 73)" },
       { name: "Axios", color: "#5a29e4" },
     ],

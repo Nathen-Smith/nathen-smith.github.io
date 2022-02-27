@@ -1,9 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   scroll-behavior: smooth;
+}
+
+.FontAwesome {
+  @media (min-width: 1000px) {
+    opacity: 0.5;
+    transform: opacity ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+    &-dark {
+      opacity: 0;
+      color: red;
+    }
+  }
 }
 
 .skillbar-title {
