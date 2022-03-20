@@ -5,10 +5,6 @@ import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "./Layout";
 import { pageSections, navIconLinks, mobileLeftItems } from "./constants";
-import smoothscroll from "smoothscroll-polyfill";
-
-// kick off the polyfill!
-smoothscroll.polyfill();
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -187,7 +183,10 @@ const App = () => {
                                 height: "24px",
                                 width: "24px",
                               }}
-                              className="FontAwesome"
+                              className={
+                                `FontAwesome` +
+                                (theme === "dark" ? "-dark" : "")
+                              }
                             />
                           </a>
                         );
