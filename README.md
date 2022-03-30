@@ -10,8 +10,7 @@
 
 6. Push the repository to your own GitHub
 ```
-git remote rm origin
-git remote add origin <GITHUB_USERNAME>.github.io.git
+git remote set-url origin <GITHUB_USERNAME>.github.io.git
 git branch -M main
 git push -u origin main
 ```
