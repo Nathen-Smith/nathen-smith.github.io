@@ -5,10 +5,6 @@ import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "./Layout";
 import { pageSections, navIconLinks, mobileLeftItems } from "./constants";
-import smoothscroll from "smoothscroll-polyfill";
-
-// kick off the polyfill!
-smoothscroll.polyfill();
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -179,17 +175,24 @@ const App = () => {
                           <a
                             href={item.link}
                             key={item.link}
-                            className="flex justify-center items-center"
+                            className="flex justify-center items-center opacity-0.2"
                           >
                             <FontAwesomeIcon
                               icon={item.icon}
-                              style={{ height: "24px", width: "24px" }}
+                              style={{
+                                height: "24px",
+                                width: "24px",
+                              }}
+                              className={
+                                `FontAwesome` +
+                                (theme === "dark" ? "-dark" : "")
+                              }
                             />
                           </a>
                         );
                       })}
 
-                    <div className="flex items-center border text-gray-400 border-gray-400 rounded-md sm:hover:bg-gray-200 sm:dark:hover:bg-zinc-700 sm:hover:text-gray-700 sm:dark:hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
+                    <div className="flex items-center border text-black dark:text-white border-gray-400 rounded-md sm:hover:bg-gray-200 sm:dark:hover:bg-zinc-700 sm:dark:hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
                       {theme === "light" ? (
                         <SunIcon
                           onClick={() => dispatch("dark")}

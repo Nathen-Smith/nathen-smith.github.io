@@ -1,0 +1,55 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@mixin tailwind-transition {
+  transform: all ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.FontAwesome {
+  @media (min-width: 768px) {
+    color: rgb(156 163 175);
+    @include tailwind-transition();
+    &:hover {
+      color: black;
+    }
+    &-dark {
+      @include tailwind-transition();
+      color: rgb(107 114 128);
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  font-size: 14px;
+  font-weight: semi-bold;
+}
+
+.skillbar-title span {
+  display: block;
+  width: 200px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.skillbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  height: 35px;
+}
