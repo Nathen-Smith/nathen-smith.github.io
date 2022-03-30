@@ -239,7 +239,7 @@ const App = () => {
               className="sm:hidden relative z-50"
             >
               <Disclosure.Panel
-                className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right ml-auto mr-0 w-1/4"
+                className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right ml-auto mr-0 w-1/3"
                 style={{ height: "100vh" }}
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col text-right">
