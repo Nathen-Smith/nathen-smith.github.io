@@ -6,17 +6,25 @@ html {
   scroll-behavior: smooth;
 }
 
+@mixin tailwind-transition {
+  transform: all ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .FontAwesome {
-  @media (min-width: 1000px) {
-    opacity: 0.5;
-    transform: opacity ease-in-out;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
+  @media (min-width: 768px) {
+    color: rgb(156 163 175);
+    @include tailwind-transition();
     &:hover {
-      opacity: 1;
+      color: black;
     }
     &-dark {
-      opacity: 0.5;
+      @include tailwind-transition();
+      color: rgb(107 114 128);
+      &:hover {
+        color: white;
+      }
     }
   }
 }

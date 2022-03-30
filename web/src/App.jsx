@@ -192,7 +192,7 @@ const App = () => {
                         );
                       })}
 
-                    <div className="flex items-center border text-gray-400 border-gray-400 rounded-md sm:hover:bg-gray-200 sm:dark:hover:bg-zinc-700 sm:hover:text-gray-700 sm:dark:hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
+                    <div className="flex items-center border text-black dark:text-white border-gray-400 rounded-md sm:hover:bg-gray-200 sm:dark:hover:bg-zinc-700 sm:dark:hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
                       {theme === "light" ? (
                         <SunIcon
                           onClick={() => dispatch("dark")}
