@@ -1,6 +1,12 @@
-import React, { useState, useEffect, useCallback, useReducer } from "react";
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useReducer,
+  Fragment,
+} from "react";
 import { useMediaQuery } from "react-responsive";
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "./Layout";
@@ -222,39 +228,53 @@ const App = () => {
                 </div>
               </div>
             </div>
-            <Disclosure.Panel className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md">
-              <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col text-right">
-                {navLinks.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.to}
-                    className={classNames(
-                      item.active
-                        ? "bg-gray-300 text-black dark:bg-zinc-600 dark:text-white py-1.5"
-                        : "text-gray-400",
-                      "px-3 py-2 rounded-md text-sm font-medium"
-                    )}
-                  >
-                    {item.name}
-                  </a>
-                ))}
-                {navIconLinks
-                  .filter((item) => !isNotMobile && item.mobileInvisible)
-                  .map((item) => {
-                    // if item is mobile invisible, do not return it when mobile view
-                    // => if in desktop view or is supposed to be visible in mobile view
-                    // else show in dropdown
-                    return (
-                      <a href={item.link} key={item.link} className="pr-3">
-                        <FontAwesomeIcon
-                          icon={item.icon}
-                          style={{ height: "24px", width: "24px" }}
-                        />
-                      </a>
-                    );
-                  })}
-              </div>
-            </Disclosure.Panel>
+
+            <Transition
+              enter="transition-transform translate-x-full duration-200 ease-out "
+              enterFrom="transform translate-x-full"
+              enterTo="transform translate-x-0"
+              leave="transition-transform translate-x-0 duration-1000 ease-out"
+              leaveFrom="transform translate-x-0"
+              leaveTo="transform translate-x-full"
+              className="sm:hidden relative z-50"
+            >
+              <Disclosure.Panel
+                className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right ml-auto mr-0 w-1/4"
+                style={{ height: "100vh" }}
+              >
+                <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col text-right">
+                  {navLinks.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.to}
+                      className={classNames(
+                        item.active
+                          ? "bg-gray-300 text-black dark:bg-zinc-600 dark:text-white py-1.5"
+                          : "text-gray-400",
+                        "px-3 py-2 rounded-md text-sm font-medium"
+                      )}
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                  {navIconLinks
+                    .filter((item) => !isNotMobile && item.mobileInvisible)
+                    .map((item) => {
+                      // if item is mobile invisible, do not return it when mobile view
+                      // => if in desktop view or is supposed to be visible in mobile view
+                      // else show in dropdown
+                      return (
+                        <a href={item.link} key={item.link} className="pr-3">
+                          <FontAwesomeIcon
+                            icon={item.icon}
+                            style={{ height: "24px", width: "24px" }}
+                          />
+                        </a>
+                      );
+                    })}
+                </div>
+              </Disclosure.Panel>
+            </Transition>
           </>
         )}
       </Disclosure>
