@@ -230,10 +230,10 @@ const App = () => {
             </div>
 
             <Transition
-              enter="transition-transform translate-x-full duration-200 ease-out "
+              enter="transition-transform translate-x-full duration-150 ease-out "
               enterFrom="transform translate-x-full"
               enterTo="transform translate-x-0"
-              leave="transition-transform translate-x-0 duration-1000 ease-out"
+              leave="transition-transform translate-x-0 duration-150 ease-in"
               leaveFrom="transform translate-x-0"
               leaveTo="transform translate-x-full"
               className="sm:hidden relative z-50"
