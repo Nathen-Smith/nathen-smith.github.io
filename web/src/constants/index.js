@@ -90,28 +90,39 @@ export const About = () => {
 
 export const experience = [
   {
-    title: "Digital Systems Laboratory ECE 385 Course Assistant",
-    date: "Jan 2022 - May 2022",
-    description:
-      "Guided students through the design and implementation of computer architecture problems in SystemVerilog and C",
-  },
-  {
-    title: "Software Development Engineer Intern @ Forward Data Lab",
+    company: "Forward Data Lab: Professor K.C.C. Chang",
+    title: "Software Engineer Intern",
     date: "Sep 2021 - May 2022",
-    description:
-      "I am responsible for developing an API and frontend utilizing higher education and Microsoft MAKES APIs to meaningfully and efficiently compare institutions in addition to backend performance and frontend bugs. I reduced the latency of the slowest MySQL queries 5 times by using DB indexing, compiler and algorithmic simplification. In order to achieve environment replication, I containerized the Flask server with Docker and deployed MySQL server accessed through ssh tunnel. Lastly, I enhanced UI/UX and backend features including responsiveness and image styling through React, JavaScript, Flask, and Python.",
+    description: `I am responsible for developing an API and frontend utilizing
+      higher education APIs to meaningfully and 
+      efficiently compare institutions in addition to backend performance 
+      and frontend bugs. I implemented 2 pagination components, sorting with 10 total options,
+      bar chart visualizations, frontend input and backend error handling, and responsive tables
+      and image displaying used in 6+ frontend components. I halved request time and 
+      response size by using concurrent API calls and combining duplicate fields. I reduced the 
+      latency of the slowest MySQL queries 5 times by using DB indexing, compiler 
+      and algorithmic simplification.`,
   },
   {
-    title: "Database Systems CS 411 Course Assistant",
-    date: "Aug 2021 - Present",
-    description:
-      "I guided students to find solutions to SQL, NoSQL, database problems during lecture, in office hours, and the class forum. I gave feedback and advice to final project design choices, a database driven web app. Lastly, I reviewed and contributed to writing homework and exam questions, and graded homework.",
+    company: "UIUC Department of ECE",
+    title: "Course Assistant (Computer Architecture)",
+    date: "Jan 2022 - May 2022",
+    description: `Guided students through the design and implementation of computer 
+      architecture problems in SystemVerilog and C`,
   },
   {
-    title: "Full Stack Engineer Intern @ Ziggurat Technologies",
+    company: "UIUC Department of CS",
+    title: "Course Assistant (Database Systems)",
+    date: "Aug 2021 - Dec 2021",
+    description:
+      "Guided students to find solutions to SQL, NoSQL, database problems during lecture, in office hours, and the class forum. I gave feedback and advice to final project design choices, a database driven web app. Lastly, I reviewed and contributed to writing homework and exam questions, and graded homework.",
+  },
+  {
+    company: "Ziggurat Technologies",
+    title: "Full Stack Engineer Intern",
     date: "Jul 2021 - Sep 2021",
     description:
-      "I implemented and designed user update functionality through frontend, database update, middleware, and Twilio Two-Factor Authentication APIs. The stack is React Native, Redux, Mongoose, Express.js. I am responsible for debugging API, frontend bugs, and assigning tasks to other inters. I maintained Jira issue tracking and documented build instructions for frontend backend connecting with mobile simulator.",
+      "I implemented and designed user update functionality through frontend, database update, middleware, and Twilio Two-Factor Authentication APIs. The stack is React Native, Redux, Mongoose, Express.js. I am responsible for debugging API, frontend bugs, and assigning tasks to other interns. I maintained Jira issue tracking and documented build instructions for frontend backend connecting with mobile simulator.",
   },
 ];
 
