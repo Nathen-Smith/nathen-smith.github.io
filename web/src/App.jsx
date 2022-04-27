@@ -37,13 +37,24 @@ const App = () => {
     window.onscroll = () => {
       let navLinksLen = navLinks.length;
       for (let i = 1; i < navLinksLen; i++) {
+        // start at 1 because initial element is active
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+          // current height + scroll offset >= total height
           setPageSectionTrue(navLinksLen - 1);
           return;
         }
         let elementDistanceFromTopOfViewHeight = document
           .getElementById(navLinks[i].to.slice(1))
           ?.getBoundingClientRect().top;
+        // distance relative to top of viewport height, can be negative
+
+        // we have the inner height and the distance to reach
+        // top of the element w.r.t viewport (down is positive)
+
+        // if the element top is within or above the viewport height
+        // and the distance to the bottom w.r.t viewport top > navbar height
+        //  it is active
+
         if (
           elementDistanceFromTopOfViewHeight < window.innerHeight &&
           elementDistanceFromTopOfViewHeight +
