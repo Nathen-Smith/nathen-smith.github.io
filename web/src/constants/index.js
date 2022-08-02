@@ -46,8 +46,8 @@ export const Intro = () => {
         </div>
         <br />
         <div className="text-gray-600 text-gray-800 dark:text-gray-300 text-lg">
-          <div>Computer Engineer at UIUC.</div>
           <div>Experienced Full Stack Developer.</div>
+          <div>UIUC Computer Engineer.</div>
           <div>React, Python, and TypeScript Enthusiast.</div>
           <div>Fish shell-er.</div>
           <div>Badminton Player.</div>
