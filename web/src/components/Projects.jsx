@@ -21,20 +21,22 @@ const Projects = () => {
               {project.description}
             </div>
             <div className="space-x-2 space-y-2">
-              {project.tech.map(({ name, color, textColor }) => (
+              {project.tech.map(({ name, lightMode, darkMode }) => (
                 <div
                   key={name}
-                  className="flex inline-flex border px-3 sm:px-2 lg:px-3 py-1 rounded text-sm"
+                  className="inline-flex border px-3 sm:px-2 lg:px-3 py-1 rounded text-sm"
                   style={
                     localStorage.theme === "dark" ||
                     (!("theme" in localStorage) &&
                       window.matchMedia("(prefers-color-scheme: dark)").matches)
                       ? {
-                          color: textColor || "white",
-                          borderColor: color,
-                          backgroundColor: color,
+                          color: darkMode.textColor,
+                          borderColor: darkMode.borderColor,
+                          backgroundColor: darkMode.backgroundColor,
                         }
-                      : { borderColor: color, color }
+                      : { color: lightMode.textColor, 
+                        borderColor: lightMode.borderColor
+                      }
                   }
                 >
                   {name}
