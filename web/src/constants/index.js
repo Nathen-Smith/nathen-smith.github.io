@@ -1,6 +1,8 @@
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
+import getProjectTechStyles from "./projectTechStyling";
+
 // sections that show up and get highlighted in the nav bar
 export const pageSections = [
   { name: "Nathen", to: "#", active: true, lgInvisible: false },
@@ -353,7 +355,7 @@ export const skillIcons = [
   },
 ];
 
-// text by default is white
+
 export const projects = [
   {
     src: "/assets/projects/childdevtracker.jpeg",
@@ -362,16 +364,9 @@ export const projects = [
     description:
       "Full stack web app for a user to track their child's development and diet, changes, and general journal entries",
     link: "https://github.com/Nathen-Smith/child-development-tracker",
-    tech: [
-      { name: "TypeScript", color: "#007acc" },
-      { name: "React", color: "#61DBFB" },
-      { name: "React-Router", color: "rgb(233, 73, 73)" },
-      { name: "Axios", color: "#5a29e4" },
-      { name: "Mongoose", color: "#800" },
-      { name: "MongoDB", color: "#3FA037" },
-      { name: "Firebase", color: "#FFA000" },
-      { name: "Docker", color: "#0db7ed" },
-    ],
+    tech: getProjectTechStyles([
+      "TypeScript", "React", "React-Router", "Axios", "Mongoose", "MongoDB", "Firebase", "Docker"
+    ])
   },
   {
     src: "/assets/projects/fpga_mario.jpeg",
@@ -380,10 +375,7 @@ export const projects = [
     description:
       "FPGA SOC Mario NES in SystemVerilog. Built on a DE-10 Lite FPGA, synthesized in Quartus Prime 18.1",
     link: "https://github.com/Nathen-Smith/FPGA_super_mario_bros",
-    tech: [
-      { name: "SystemVerilog", color: "#4B0082" },
-      { name: "C", color: "gray" },
-    ],
+    tech: getProjectTechStyles(["SystemVerilog", "C"])
   },
   {
     src: "/assets/projects/databoard.jpeg",
@@ -391,12 +383,7 @@ export const projects = [
     name: "Data Dashboard",
     description: "Real-time Business Intelligence on Kaggle Movies Dataset",
     link: "https://github.com/Nathen-Smith/data-dashboard",
-    tech: [
-      { name: "TypeScript", color: "#007acc" },
-      { name: "React", color: "#61DBFB" },
-      { name: "Firebase", color: "#FFA000" },
-      { name: "Python", color: "#306998" },
-    ],
+    tech: getProjectTechStyles(["TypeScript", "React", "Firebase", "Python"])
   },
   {
     src: "/assets/projects/todoistapi.jpeg",
@@ -405,13 +392,7 @@ export const projects = [
     description:
       "Robust CRUD API with cascading updates on users and their tasks",
     link: "https://github.com/Nathen-Smith/todoist-api",
-    tech: [
-      { name: "JavaScript", color: "#F0DB4F", textColor: "black" },
-      { name: "Express.js", color: "#353535" },
-      { name: "Mongoose", color: "#800" },
-      { name: "MongoDB", color: "#3FA037" },
-      { name: "Python", color: "#306998" },
-    ],
+    tech: getProjectTechStyles(["JavaScript", "Express.js", "Mongoose", "MongoDB", "Python"])
   },
   {
     src: "/assets/projects/marvelapp.jpeg",
@@ -419,13 +400,7 @@ export const projects = [
     name: "Marvel API App",
     description: "Frontend app using Marvel API",
     link: "https://nathensmith.com/marvel-api-app/",
-    tech: [
-      { name: "TypeScript", color: "#007acc" },
-      { name: "React", color: "#61DBFB" },
-      { name: "Next.js", color: "white", textColor: "black" },
-      { name: "React-Router", color: "rgb(233, 73, 73)" },
-      { name: "Axios", color: "#5a29e4" },
-    ],
+    tech: getProjectTechStyles(["TypeScript", "React", "Next.js", "React-Router", "Axios"])
   },
   {
     src: "/assets/projects/hippocampus.jpg",
@@ -434,13 +409,7 @@ export const projects = [
     description:
       "A student matching database-driven web app that allows users to customize their profile and set preferences on a desired study buddy or project partner",
     link: "https://github.com/Nathen-Smith/HippoCampus",
-    tech: [
-      { name: "JavaScript", color: "#F0DB4F", textColor: "black" },
-      { name: "Python", color: "#306998" },
-      { name: "React", color: "#61DBFB" },
-      { name: "Flask", color: "gray" },
-      { name: "MySQL", color: "#00758F" },
-    ],
+    tech: getProjectTechStyles(["JavaScript", "Python", "React", "Flask", "MySQL"])
   },
   {
     src: "/assets/projects/linux.jpeg",
@@ -449,9 +418,6 @@ export const projects = [
     description:
       "Preemptively multitasked operating system including system calls, virtual memory, interrupts and exceptions, a GUI, and a filesystem starting from a bootloader",
     link: "https://github.com/Nathen-Smith/Operating-System",
-    tech: [
-      { name: "C", color: "gray" },
-      { name: "x86", color: "#007DC3" },
-    ],
+    tech: getProjectTechStyles(["C", "x86"])
   },
 ];
