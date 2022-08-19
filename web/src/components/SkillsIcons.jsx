@@ -8,7 +8,7 @@ const SkillsIcons = () => {
           <img
             src={icon.src}
             alt={icon.alt}
-            className="block w-20 max-h-20 block mx-auto"
+            className="block w-20 max-h-20 mx-auto"
             style={
               icon.darkMode &&
               (localStorage.theme === "dark" ||

@@ -47,7 +47,7 @@ export const Intro = () => {
           I'm Nathen Smith.
         </div>
         <br />
-        <div className="text-gray-600 text-gray-800 dark:text-gray-300 text-lg">
+        <div className="text-gray-800 dark:text-gray-300 text-lg">
           <div>Experienced Full Stack Developer.</div>
           <div>UIUC Computer Engineer.</div>
           <div>React, Python, and TypeScript Enthusiast.</div>

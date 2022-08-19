@@ -164,7 +164,7 @@ const App = () => {
                 </div>
                 <div
                   className={
-                    "text-black dark:text-white left-0 absolute pl-2 block sm:hidden h-16 text-sm font-medium text-center flex justify-center items-center transition-colors ease-in-out space-x-2"
+                    "text-black dark:text-white left-0 absolute pl-2 sm:hidden h-16 text-sm font-medium text-center flex justify-center items-center transition-colors ease-in-out space-x-2"
                   }
                 >
                   {mobileLeftItems.map((item) => {
