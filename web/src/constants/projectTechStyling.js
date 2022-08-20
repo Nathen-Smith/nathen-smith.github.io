@@ -203,6 +203,18 @@ const projectTechnologyColors = {
       backgroundColor: '#007DC3',
     },
   },
+  TailwindCSS: {
+    name: 'TailwindCSS',
+    lightMode: {
+      textColor: 'rgb(56, 189, 248)',
+      borderColor: 'rgb(56, 189, 248)',
+    },
+    darkMode: {
+      textColor: 'white',
+      borderColor: 'rgb(56, 189, 248)',
+      backgroundColor: 'rgb(56, 189, 248)',
+    },
+  },
 };
 
 function getProjectTechStyles(techNames) {

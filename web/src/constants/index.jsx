@@ -366,6 +366,17 @@ export const skillIcons = [
 
 export const projects = [
   {
+    src: '/assets/projects/2048.jpeg',
+    alt: '2048',
+    name: '2048',
+    description:
+      'Clone of 2048, featuring a spawning algorithm to reduce frustration',
+    link: 'https://github.com/Nathen-Smith/2048',
+    tech: getProjectTechStyles([
+      'TypeScript', 'React', 'TailwindCSS',
+    ]),
+  },
+  {
     src: '/assets/projects/childdevtracker.jpeg',
     alt: 'childdevtracker',
     name: 'Child Development Tracker',
@@ -408,7 +419,7 @@ export const projects = [
     name: 'Marvel API App',
     description: 'Frontend app using Marvel API',
     link: 'https://nathensmith.com/marvel-api-app/',
-    tech: getProjectTechStyles(['TypeScript', 'React', 'Next.js', 'React-Router', 'Axios']),
+    tech: getProjectTechStyles(['TypeScript', 'React', 'Next.js', 'React-Router', 'Axios', 'TailwindCSS']),
   },
   {
     src: '/assets/projects/hippocampus.jpg',

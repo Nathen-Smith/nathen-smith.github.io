@@ -17,12 +17,12 @@ module.exports = {
     'react',
   ],
   rules: {
-    "react/function-component-definition": [
+    'react/function-component-definition': [
       'error',
       {
-          "namedComponents": "arrow-function",
-          "unnamedComponents": "arrow-function"
-      }
-  ]
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
 };

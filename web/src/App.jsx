@@ -3,47 +3,51 @@ import React, {
   useEffect,
   useCallback,
   useReducer,
-} from "react";
-import { useMediaQuery } from "react-responsive";
-import { Disclosure, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/outline";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Layout from "./Layout";
-import { pageSections, navIconLinks, mobileLeftItems } from "./constants";
-import isDarkMode from "./utils";
+} from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Disclosure, Transition } from '@headlessui/react';
+import {
+  MenuIcon, XIcon, SunIcon, MoonIcon,
+} from '@heroicons/react/outline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Layout from './Layout';
+import { pageSections, navIconLinks, mobileLeftItems } from './constants';
+import isDarkMode from './utils';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(' ');
 }
 
 const App = () => {
   const [navLinks, setNavLinks] = useState(pageSections);
-  const isNotMobile = useMediaQuery({ query: "(min-width: 640px)" });
+  const isNotMobile = useMediaQuery({ query: '(min-width: 640px)' });
 
   const setPageSectionTrue = useCallback(
     (index) => {
-      let newArr = [...navLinks]; // copying the old array
+      const newArr = [...navLinks]; // copying the old array
       newArr[index].active = true; // setting element at this index true
       newArr.forEach((_, idx) => {
-        idx !== index && (newArr[idx].active = false); // set everything else false
+        if (idx !== index) {
+          (newArr[idx].active = false); // set all other links inactive
+        }
       });
 
       setNavLinks(newArr);
     },
-    [navLinks]
+    [navLinks],
   );
 
   useEffect(() => {
     window.onscroll = () => {
-      let navLinksLen = navLinks.length;
-      for (let i = 1; i < navLinksLen; i++) {
+      const navLinksLen = navLinks.length;
+      for (let i = 1; i < navLinksLen; i += 1) {
         // start at 1 because initial element is active
         if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
           // current height + scroll offset >= total height
           setPageSectionTrue(navLinksLen - 1);
           return;
         }
-        let elementDistanceFromTopOfViewHeight = document
+        const elementDistanceFromTopOfViewHeight = document
           .getElementById(navLinks[i].to.slice(1))
           ?.getBoundingClientRect().top;
         // distance relative to top of viewport height, can be negative
@@ -56,17 +60,18 @@ const App = () => {
         //  it is active
 
         if (
-          elementDistanceFromTopOfViewHeight < window.innerHeight &&
-          elementDistanceFromTopOfViewHeight +
-            parseInt(
+          elementDistanceFromTopOfViewHeight < window.innerHeight
+          && elementDistanceFromTopOfViewHeight
+            + parseInt(
               window
                 .getComputedStyle(
-                  document.getElementById(navLinks[i].to.slice(1))
+                  document.getElementById(navLinks[i].to.slice(1)),
                 )
-                .getPropertyValue("height")
-                .slice(0, -2) //remove px
-            ) >
-            65
+                .getPropertyValue('height')
+                .slice(0, -2), // remove px
+              10,
+            )
+            > 65
         ) {
           setPageSectionTrue(i);
           return;
@@ -77,12 +82,11 @@ const App = () => {
   }, [navLinks, setPageSectionTrue]);
 
   function setBodyStyle(theme) {
-    if (theme === "dark") {
-      document.body.style.backgroundColor = "#27272a";
+    if (theme === 'dark') {
+      document.body.style.backgroundColor = '#27272a';
       return;
     }
-    document.body.style.backgroundColor = "white";
-    return;
+    document.body.style.backgroundColor = 'white';
   }
 
   useEffect(() => {
@@ -90,34 +94,34 @@ const App = () => {
     if (
       isDarkMode()
     ) {
-      document.documentElement.classList.add("dark");
-      setBodyStyle("dark");
+      document.documentElement.classList.add('dark');
+      setBodyStyle('dark');
     } else {
-      document.documentElement.classList.remove("dark");
-      setBodyStyle("light");
+      document.documentElement.classList.remove('dark');
+      setBodyStyle('light');
     }
   }, []);
 
   function reducer(_, themeColor) {
     switch (themeColor) {
-      case "light":
-        localStorage.theme = "light";
-        document.documentElement.classList.remove("dark");
-        setBodyStyle("light");
-        return "light";
-      case "dark":
-        localStorage.theme = "dark";
-        document.documentElement.classList.add("dark");
-        setBodyStyle("dark");
-        return "dark";
+      case 'light':
+        localStorage.theme = 'light';
+        document.documentElement.classList.remove('dark');
+        setBodyStyle('light');
+        return 'light';
+      case 'dark':
+        localStorage.theme = 'dark';
+        document.documentElement.classList.add('dark');
+        setBodyStyle('dark');
+        return 'dark';
       default:
-        localStorage.removeItem("theme");
-        setBodyStyle("dark");
-        return "dark";
+        localStorage.removeItem('theme');
+        setBodyStyle('dark');
+        return 'dark';
     }
   }
 
-  const [theme, dispatch] = useReducer(reducer, localStorage.theme || "dark");
+  const [theme, dispatch] = useReducer(reducer, localStorage.theme || 'dark');
 
   return (
     <div className="dark:bg-zinc-800 dark:text-gray-300 transition-colors ease-in-out">
@@ -142,9 +146,9 @@ const App = () => {
                               href={item.to}
                               className={classNames(
                                 item.active
-                                  ? "text-black dark:text-white"
-                                  : "text-gray-400 hover:text-black dark:text-gray-500 dark:hover:text-gray-100",
-                                "h-16 text-sm font-medium text-center flex justify-center items-center transition-colors ease-in-out"
+                                  ? 'text-black dark:text-white'
+                                  : 'text-gray-400 hover:text-black dark:text-gray-500 dark:hover:text-gray-100',
+                                'h-16 text-sm font-medium text-center flex justify-center items-center transition-colors ease-in-out',
                               )}
                             >
                               {item.name}
@@ -152,41 +156,38 @@ const App = () => {
 
                             <div
                               className={`${
-                                item.active ? "opacity-100" : "opacity-0"
+                                item.active ? 'opacity-100' : 'opacity-0'
                               } relative h-0.5 bg-blue-600 dark:bg-indigo-300 -top-0.5 rounded-t-3xl transition-opacity ease-in-out`}
-                            ></div>
+                            />
                           </span>
                         ))}
                     </div>
                   </div>
                 </div>
                 <div
-                  className={
-                    "text-black dark:text-white left-0 absolute pl-2 sm:hidden h-16 text-sm font-medium text-center flex justify-center items-center transition-colors ease-in-out space-x-2"
-                  }
+                  className="text-black dark:text-white left-0 absolute pl-2 sm:hidden h-16 text-sm font-medium text-center flex justify-center items-center transition-colors ease-in-out space-x-2"
                 >
-                  {mobileLeftItems.map((item) => {
-                    return (
-                      <a
-                        key={item.name}
-                        href={item.to}
-                        className="h-16 flex items-center"
-                      >
-                        <span className={item.className}>{item.name}</span>
-                      </a>
-                    );
-                  })}
+                  {mobileLeftItems.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.to}
+                      className="h-16 flex items-center"
+                    >
+                      <span className={item.className}>{item.name}</span>
+                    </a>
+                  ))}
                 </div>
 
                 <div className="absolute inset-y-0 right-0 flex items-center justify-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                   <div className="ml-3 relative text-sm font-small flex flex-row justify-center items-center space-x-3 sm:space-x-4">
                     {navIconLinks
                       .filter((item) => isNotMobile || !item.mobileInvisible)
-                      .map((item) => {
+                      .map((item) =>
                         // if item is mobile invisible, do not return it when mobile view
                         // => if in desktop view or is supposed to be visible in mobile view
                         // if mobile and is supposed to be visible in dropdown;
-                        return (
+                        // eslint-disable-next-line implicit-arrow-linebreak
+                        (
                           <a
                             href={item.link}
                             key={item.link}
@@ -195,27 +196,26 @@ const App = () => {
                             <FontAwesomeIcon
                               icon={item.icon}
                               style={{
-                                height: "24px",
-                                width: "24px",
+                                height: '24px',
+                                width: '24px',
                               }}
                               className={
-                                `FontAwesome` +
-                                (theme === "dark" ? "-dark" : "")
+                                `FontAwesome${
+                                  theme === 'dark' ? '-dark' : ''}`
                               }
                             />
                           </a>
-                        );
-                      })}
+                        ))}
 
                     <div className="flex items-center border text-black dark:text-white border-gray-400 rounded-md sm:hover:bg-gray-200 sm:dark:hover:bg-zinc-700 sm:dark:hover:text-white cursor-pointer transition-colors ease-in-out focus:outline-none">
-                      {theme === "light" ? (
+                      {theme === 'light' ? (
                         <SunIcon
-                          onClick={() => dispatch("dark")}
+                          onClick={() => dispatch('dark')}
                           className="h-7"
                         />
                       ) : (
                         <MoonIcon
-                          onClick={() => dispatch("light")}
+                          onClick={() => dispatch('light')}
                           className="h-7"
                         />
                       )}
@@ -258,9 +258,9 @@ const App = () => {
                       href={item.to}
                       className={classNames(
                         item.active
-                          ? "bg-gray-300 text-black dark:bg-zinc-600 dark:text-white py-1.5"
-                          : "text-gray-400",
-                        "px-3 py-2 rounded-md text-sm font-medium"
+                          ? 'bg-gray-300 text-black dark:bg-zinc-600 dark:text-white py-1.5'
+                          : 'text-gray-400',
+                        'px-3 py-2 rounded-md text-sm font-medium',
                       )}
                     >
                       {item.name}
@@ -268,19 +268,19 @@ const App = () => {
                   ))}
                   {navIconLinks
                     .filter((item) => !isNotMobile && item.mobileInvisible)
-                    .map((item) => {
+                    .map((item) =>
                       // if item is mobile invisible, do not return it when mobile view
                       // => if in desktop view or is supposed to be visible in mobile view
                       // else show in dropdown
-                      return (
+                      // eslint-disable-next-line implicit-arrow-linebreak
+                      (
                         <a href={item.link} key={item.link} className="pr-3">
                           <FontAwesomeIcon
                             icon={item.icon}
-                            style={{ height: "24px", width: "24px" }}
+                            style={{ height: '24px', width: '24px' }}
                           />
                         </a>
-                      );
-                    })}
+                      ))}
                 </div>
               </Disclosure.Panel>
             </Transition>

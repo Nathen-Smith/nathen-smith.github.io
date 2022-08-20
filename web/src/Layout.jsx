@@ -1,18 +1,16 @@
-import { Intro } from "./constants";
-import { About } from "./constants";
-import Experience from "./components/Experience";
+import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Intro, About, showSkillBar } from './constants';
+import Experience from './components/Experience';
 
-import { showSkillBar } from "./constants";
-import SkillsBar from "./components/SkillsBar";
-import SkillsIcons from "./components/SkillsIcons";
+import SkillsBar from './components/SkillsBar';
+import SkillsIcons from './components/SkillsIcons';
 
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
-
-import { useMediaQuery } from "react-responsive";
+import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 const Layout = () => {
-  const isNotMobile = useMediaQuery({ query: "(min-width: 640px)" });
+  const isNotMobile = useMediaQuery({ query: '(min-width: 640px)' });
 
   return (
     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -49,7 +47,7 @@ const Layout = () => {
         </div>
       )}
       <div id="portfolio" className="scroll-mt-16 mb-2">
-        <div className="text-center text-4xl mb-2">work i'm proud of</div>
+        <div className="text-center text-4xl mb-2">{'work i\'m proud of'}</div>
         <Projects />
       </div>
       <div id="contact" className="scroll-mt-16 mb-2">
