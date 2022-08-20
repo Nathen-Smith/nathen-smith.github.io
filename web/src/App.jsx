@@ -248,9 +248,10 @@ const App = () => {
               leaveTo="transform translate-x-full"
               className="sm:hidden relative z-50"
             >
+              <div className="flex">
+              <Disclosure.Button className="inline z-50 h-screen w-2/3" />
               <Disclosure.Panel
-                className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right ml-auto mr-0 w-1/3"
-                style={{ height: "100vh" }}
+                className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right mr-0 w-1/3 h-screen"
               >
                 <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col text-right">
                   {navLinks.map((item) => (
@@ -284,6 +285,7 @@ const App = () => {
                     })}
                 </div>
               </Disclosure.Panel>
+              </div>
             </Transition>
           </>
         )}
