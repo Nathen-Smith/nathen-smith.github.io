@@ -51,57 +51,53 @@ export const mobileLeftItems = [
   { name: 'Nathen Smith', to: '#', className: 'font-bold' },
 ];
 
-export function Intro() {
-  return (
-    <div className="grid grid-cols-2 h-screen">
-      <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
-        <div className="text-9xl text-black dark:text-white">Hi.</div>
-        <div className="text-3xl text-black dark:text-white">
-          {'I\'m Nathen Smith.'}
-        </div>
-        <br />
-        <div className="text-gray-800 dark:text-gray-300 text-lg">
-          <div>Experienced Full Stack Developer.</div>
-          <div>UIUC Computer Engineer.</div>
-          <div>React, Python, and TypeScript Enthusiast.</div>
-          <div>Fish shell-er.</div>
-          <div>Badminton Player.</div>
-        </div>
-        <br />
-        <a
-          href="#about"
-          className="btn dark:bg-white text-white dark:text-black bg-blue-500 px-3 py-2 rounded-md btn-sm font-bold text-sm self-start"
-        >
-          MORE ABOUT ME
-        </a>
+export const Intro = () => (
+  <div className="grid grid-cols-2 h-screen">
+    <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
+      <div className="text-9xl text-black dark:text-white">Hi.</div>
+      <div className="text-3xl text-black dark:text-white">
+        {'I\'m Nathen Smith.'}
       </div>
-      <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
-        <img
-          src="/assets/me.jpg"
-          alt="portrait"
-          className="rounded-full w-4/5 sm:w-3/4 lg:w-2/3 mx-auto mt-6 sm:mt-0"
-        />
+      <br />
+      <div className="text-gray-800 dark:text-gray-300 text-lg">
+        <div>Experienced Full Stack Developer.</div>
+        <div>UIUC Computer Engineer.</div>
+        <div>React, Python, and TypeScript Enthusiast.</div>
+        <div>Fish shell-er.</div>
+        <div>Badminton Player.</div>
       </div>
+      <br />
+      <a
+        href="#about"
+        className="btn dark:bg-white text-white dark:text-black bg-blue-500 px-3 py-2 rounded-md btn-sm font-bold text-sm self-start"
+      >
+        MORE ABOUT ME
+      </a>
     </div>
-  );
-}
+    <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
+      <img
+        src="/assets/me.jpg"
+        alt="portrait"
+        className="rounded-full w-4/5 sm:w-3/4 lg:w-2/3 mx-auto mt-6 sm:mt-0"
+      />
+    </div>
+  </div>
+);
 
-export function About() {
-  return (
-    <div>
-      <div className="text-center text-4xl mb-2">about</div>
-      <div className="text-lg mb-2">
-        I am a Senior studying Computer Engineering at the University of
-        Illinois at Urbana-Champaign. Detail-oriented software developer where I
-        enjoy fostering a positive development environment, designing robust,
-        scalable solutions, and ensuring responsive, intuitive user experiences.
-        As a perfectionist, my favorite part of coding is the process of trying
-        to break a software system and fixing edge cases in order to ensure
-        safety and ease of use.
-      </div>
+export const About = () => (
+  <div>
+    <div className="text-center text-4xl mb-2">about</div>
+    <div className="text-lg mb-2">
+      I am a Senior studying Computer Engineering at the University of
+      Illinois at Urbana-Champaign. Detail-oriented software developer where I
+      enjoy fostering a positive development environment, designing robust,
+      scalable solutions, and ensuring responsive, intuitive user experiences.
+      As a perfectionist, my favorite part of coding is the process of trying
+      to break a software system and fixing edge cases in order to ensure
+      safety and ease of use.
     </div>
-  );
-}
+  </div>
+);
 
 export const experience = [
   {
