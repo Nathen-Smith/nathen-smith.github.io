@@ -1,5 +1,6 @@
 import { projects } from "../constants";
 import { ExternalLinkIcon } from "@heroicons/react/outline";
+import isDarkMode from "../utils";
 
 const Projects = () => {
   return (
@@ -26,9 +27,7 @@ const Projects = () => {
                   key={name}
                   className="inline-flex border px-3 sm:px-2 lg:px-3 py-1 rounded text-sm"
                   style={
-                    localStorage.theme === "dark" ||
-                    (!("theme" in localStorage) &&
-                      window.matchMedia("(prefers-color-scheme: dark)").matches)
+                    isDarkMode()
                       ? {
                           color: darkMode.textColor,
                           borderColor: darkMode.borderColor,
