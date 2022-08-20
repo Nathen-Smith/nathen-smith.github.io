@@ -1,13 +1,19 @@
-import { projects } from "../constants";
-import { ExternalLinkIcon } from "@heroicons/react/outline";
-import isDarkMode from "../utils";
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 
-const Projects = () => {
+import React from 'react';
+import { ExternalLinkIcon } from '@heroicons/react/outline';
+import { projects } from '../constants';
+import isDarkMode from '../utils';
+
+function Projects() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
       {projects.map((project) => (
         <div
-          onClick={() => window.open(project.link, "_blank").focus()}
+          onClick={() => {
+            window.open(project.link, '_blank').focus();
+          }}
           key={project.src}
           className="cursor-pointer shadow-md max-w-225px rounded-xl
               sm:hover:scale-110 sm:transition-all ease-in-out hover:shadow-xl text-center"
@@ -29,12 +35,13 @@ const Projects = () => {
                   style={
                     isDarkMode()
                       ? {
-                          color: darkMode.textColor,
-                          borderColor: darkMode.borderColor,
-                          backgroundColor: darkMode.backgroundColor,
-                        }
-                      : { color: lightMode.textColor, 
-                        borderColor: lightMode.borderColor
+                        color: darkMode.textColor,
+                        borderColor: darkMode.borderColor,
+                        backgroundColor: darkMode.backgroundColor,
+                      }
+                      : {
+                        color: lightMode.textColor,
+                        borderColor: lightMode.borderColor,
                       }
                   }
                 >
@@ -47,6 +54,6 @@ const Projects = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Projects;

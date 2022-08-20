@@ -1,23 +1,26 @@
-import { InView } from "react-intersection-observer";
-import { skills } from "../constants";
+import React from 'react';
+import { InView } from 'react-intersection-observer';
+import { skills } from '../constants';
 
-const SkillsBar = () => {
+function SkillsBar() {
   return (
-    <InView triggerOnce={true}>
+    <InView triggerOnce>
       {({ ref, inView }) => (
         <div className="rounded-md mx-10 sm:mx-0" ref={ref}>
-          {skills.map(({ name, textColor, backgroundColor, percentage }) => (
+          {skills.map(({
+            name, textColor, backgroundColor, percentage,
+          }) => (
             <div key={name} className="skillbar rounded-md shadow-md">
               <div
                 className="skillbar-title pl-3 font-medium rounded-md"
                 style={
                   inView
                     ? {
-                        backgroundColor,
-                        transition: "width 2.6s",
-                        width: percentage,
-                      }
-                    : { backgroundColor, width: "0" }
+                      backgroundColor,
+                      transition: 'width 2.6s',
+                      width: percentage,
+                    }
+                    : { backgroundColor, width: '0' }
                 }
               >
                 <span style={{ color: textColor }}>{name}</span>
@@ -28,6 +31,6 @@ const SkillsBar = () => {
       )}
     </InView>
   );
-};
+}
 
 export default SkillsBar;

@@ -3,7 +3,6 @@ import React, {
   useEffect,
   useCallback,
   useReducer,
-  Fragment,
 } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Disclosure, Transition } from "@headlessui/react";
@@ -246,10 +245,9 @@ const App = () => {
               leave="transition-transform translate-x-0 duration-150 ease-in"
               leaveFrom="transform translate-x-0"
               leaveTo="transform translate-x-full"
-              className="sm:hidden relative z-50"
+              className="sm:hidden relative z-50 flex"
             >
-              <div className="flex">
-              <Disclosure.Button className="inline z-50 h-screen w-2/3" />
+              <Disclosure.Button as="div" className="inline z-50 h-screen w-2/3 bg-none" />
               <Disclosure.Panel
                 className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right mr-0 w-1/3 h-screen"
               >
@@ -285,7 +283,6 @@ const App = () => {
                     })}
                 </div>
               </Disclosure.Panel>
-              </div>
             </Transition>
           </>
         )}

@@ -1,9 +1,12 @@
-import { experience } from "../constants";
+import React from 'react';
+import { experience } from '../constants';
 
-const Experience = () => {
+function Experience() {
   return (
     <div>
-      {experience.map(({ title, date, description, company }) => (
+      {experience.map(({
+        title, date, description, company,
+      }) => (
         <div
           className="flow-root sm:transition-none ease-in-out delay-200 overflow-hidden"
           key={title}
@@ -24,6 +27,6 @@ const Experience = () => {
       ))}
     </div>
   );
-};
+}
 
 export default Experience;
