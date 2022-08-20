@@ -11,6 +11,7 @@ import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "./Layout";
 import { pageSections, navIconLinks, mobileLeftItems } from "./constants";
+import isDarkMode from "./utils";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -88,9 +89,7 @@ const App = () => {
   useEffect(() => {
     // initialization on reload
     if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
+      isDarkMode()
     ) {
       document.documentElement.classList.add("dark");
       setBodyStyle("dark");

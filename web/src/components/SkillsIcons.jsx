@@ -1,4 +1,5 @@
 import { skillIcons } from "../constants";
+import isDarkMode from "../utils";
 
 const SkillsIcons = () => {
   return (
@@ -11,9 +12,7 @@ const SkillsIcons = () => {
             className="block w-20 max-h-20 mx-auto"
             style={
               icon.darkMode &&
-              (localStorage.theme === "dark" ||
-                (!("theme" in localStorage) &&
-                  window.matchMedia("(prefers-color-scheme: dark)").matches))
+              (isDarkMode())
                 ? {
                     filter: "brightness(0) saturate(100%) invert(1)",
                   }
