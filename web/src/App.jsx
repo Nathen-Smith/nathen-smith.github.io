@@ -247,7 +247,7 @@ const App = () => {
               leaveTo="transform translate-x-full"
               className="sm:hidden relative z-50 flex"
             >
-              <Disclosure.Button as="div" className="inline z-50 h-screen w-2/3 bg-none" />
+              <Disclosure.Button as="div" className="inline z-50 h-screen w-2/3 bg-none cursor-pointer" />
               <Disclosure.Panel
                 className="sm:hidden z-50 bg-gray-100 dark:bg-neutral-800 shadow-md text-right mr-0 w-1/3 h-screen"
               >

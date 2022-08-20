@@ -15,7 +15,7 @@ const Projects = () => (
         }}
         key={project.src}
         className="cursor-pointer shadow-md max-w-225px rounded-xl
-              sm:hover:scale-110 sm:transition-all ease-in-out hover:shadow-xl text-center"
+              sm:hover:scale-110 sm:transition-all ease-in-out sm:hover:shadow-xl text-center"
       >
         <img src={project.src} alt={project.alt} className="rounded-t-xl" />
         <div className="m-2">
