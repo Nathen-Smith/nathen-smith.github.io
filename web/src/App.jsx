@@ -221,7 +221,7 @@ const App = () => {
                       )}
                     </div>
                     <div className="flex items-center sm:hidden border text-gray-400 border-gray-400 rounded-md">
-                      <Disclosure.Button className="inline-flex items-center justify-center rounded-md focus:outline-none h-7">
+                      <Disclosure.Button as="div" className="inline-flex items-center justify-center rounded-md focus:outline-none h-7">
                         <span className="sr-only">Open main menu</span>
                         {open ? (
                           <XIcon className="block h-6 w-7" aria-hidden="true" />
