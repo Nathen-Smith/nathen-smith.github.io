@@ -370,7 +370,7 @@ export const projects = [
     alt: '2048',
     name: '2048',
     description:
-      'Clone of 2048, featuring a spawning algorithm to reduce frustration',
+      'Clone of 2048, featuring a spawning algorithm that reduces frustration',
     link: 'https://nathensmith.com/2048',
     tech: getProjectTechStyles([
       'TypeScript', 'React', 'TailwindCSS',
