@@ -27,6 +27,8 @@ yarn start
 
 2. Start making modifications to `constants/index.js`
 
+3. ```yarn run lint``` to run ESLint.
+
 ## Customization
 
 Q: How to change the position indicator color on web mode?
