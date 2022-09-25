@@ -76,9 +76,9 @@ export const Intro = () => (
     </div>
     <div className="sm:justify-center flex flex-col text-left mt-10 sm:-mt-28">
       <img
-        src="/assets/me.jpg"
+        src="/assets/me.webp"
         alt="portrait"
-        className="rounded-full w-4/5 sm:w-3/4 lg:w-2/3 mx-auto mt-6 sm:mt-0"
+        className="w-4/5 sm:w-3/4 lg:w-2/3 mx-auto mt-6 sm:mt-0"
       />
     </div>
   </div>
@@ -366,7 +366,7 @@ export const skillIcons = [
 
 export const projects = [
   {
-    src: '/assets/projects/2048.jpeg',
+    src: '/assets/projects/2048.webp',
     alt: '2048',
     name: '2048',
     description:
@@ -377,7 +377,7 @@ export const projects = [
     ]),
   },
   {
-    src: '/assets/projects/childdevtracker.jpeg',
+    src: '/assets/projects/childdevtracker.webp',
     alt: 'childdevtracker',
     name: 'Child Development Tracker',
     description:
@@ -388,7 +388,7 @@ export const projects = [
     ]),
   },
   {
-    src: '/assets/projects/fpga_mario.jpeg',
+    src: '/assets/projects/fpga_mario.webp',
     alt: 'fpgamario',
     name: 'FPGA Mario NES',
     description:
@@ -397,7 +397,7 @@ export const projects = [
     tech: getProjectTechStyles(['SystemVerilog', 'C']),
   },
   {
-    src: '/assets/projects/databoard.jpeg',
+    src: '/assets/projects/databoard.webp',
     alt: 'data-board',
     name: 'Data Dashboard',
     description: 'Real-time Business Intelligence on Kaggle Movies Dataset',
@@ -405,7 +405,7 @@ export const projects = [
     tech: getProjectTechStyles(['TypeScript', 'React', 'Firebase', 'Python']),
   },
   {
-    src: '/assets/projects/todoistapi.jpeg',
+    src: '/assets/projects/todoistapi.webp',
     alt: 'todoist',
     name: 'Todoist API',
     description:
@@ -414,7 +414,7 @@ export const projects = [
     tech: getProjectTechStyles(['JavaScript', 'Express.js', 'Mongoose', 'MongoDB', 'Python']),
   },
   {
-    src: '/assets/projects/marvelapp.jpeg',
+    src: '/assets/projects/marvelapp.webp',
     alt: 'marvelapiapp',
     name: 'Marvel API App',
     description: 'Frontend app using Marvel API',
@@ -422,7 +422,7 @@ export const projects = [
     tech: getProjectTechStyles(['TypeScript', 'React', 'Next.js', 'React-Router', 'Axios', 'TailwindCSS']),
   },
   {
-    src: '/assets/projects/hippocampus.jpg',
+    src: '/assets/projects/hippocampus.webp',
     alt: 'hippocampus',
     name: 'HippoCampus',
     description:
@@ -431,7 +431,7 @@ export const projects = [
     tech: getProjectTechStyles(['JavaScript', 'Python', 'React', 'Flask', 'MySQL']),
   },
   {
-    src: '/assets/projects/linux.jpeg',
+    src: '/assets/projects/linux.webp',
     alt: 'os',
     name: 'Operating System',
     description:
