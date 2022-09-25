@@ -224,11 +224,10 @@ const App = () => {
                       <Disclosure.Button as="div" className="inline-flex items-center justify-center rounded-md focus:outline-none h-7">
                         <span className="sr-only">Open main menu</span>
                         {open ? (
-                          <XIcon className="block h-6 w-7" aria-hidden="true" />
+                          <XIcon className="block h-6 w-7" />
                         ) : (
                           <MenuIcon
                             className="block h-6 w-7"
-                            aria-hidden="true"
                           />
                         )}
                       </Disclosure.Button>

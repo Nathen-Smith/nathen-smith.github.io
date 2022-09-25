@@ -17,7 +17,7 @@ const Projects = () => (
         className="cursor-pointer shadow-md max-w-225px rounded-xl
               sm:hover:scale-110 sm:transition-all ease-in-out sm:hover:shadow-xl text-center"
       >
-        <img src={project.src} alt={project.alt} className="rounded-t-xl" />
+        <img src={project.src} alt={project.alt} className="rounded-t-xl" loading="lazy" />
         <div className="m-2">
           <div className="flex flex-row font-semibold justify-center space-x-1">
             <div className="text-black dark:text-white">{project.name}</div>
