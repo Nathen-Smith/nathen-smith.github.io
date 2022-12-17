@@ -9,7 +9,7 @@
 5. Change CNAME if you have bought a domain, homepage in `package.json`. Or remove it for now.
 
 6. Push the repository to your own GitHub
-```sh
+```
 git remote set-url origin <GITHUB_USERNAME>.github.io.git
 git branch -M main
 git push -u origin main
